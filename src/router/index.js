@@ -2,13 +2,14 @@
 * @Author: chenchao
 * @Date: 2018-08-21 14:45:56
 * @Email: chenchao3@sh.superjia.com
-* @Last Modified by: chenchao
-* @Last Modified time: 2018-08-21 21:16:04
+ * @Last Modified by: chenchao
+ * @Last Modified time: 2018-08-22 18:29:10
 */
 
 import routes from './routes.js'
 import Vue from 'vue'
 import VueRouter from 'vue-router'
+import store from '../store/store'
 
 Vue.use(VueRouter)
 
@@ -35,12 +36,20 @@ const router = new VueRouter({
 })
 
 router.beforeEach((to, from, next) => {
+  Vue.nextTick(() => {
+    store.dispatch('addLoading')
+  })
   next()
 })
 
 router.afterEach((to, from) => {
-  const { meta: { title } } = to
-  title && common.changeDocTitle(title) //设置标题
+  //const { meta: { title } } = to
+  //title && common.changeDocTitle(title) //设置标题
+  Vue.nextTick(() => {
+    setTimeout(function() {
+      store.dispatch('stopLoading')
+    }, 100)
+  })
 })
 
 export default router

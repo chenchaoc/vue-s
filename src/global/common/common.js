@@ -3,10 +3,10 @@
 * @Date: 2018-08-21 15:18:09
 * @Email: chenchao3@sh.superjia.com
  * @Last Modified by: chenchao
- * @Last Modified time: 2018-08-22 18:49:22
+ * @Last Modified time: 2018-08-22 19:23:03
 */
 import axios from 'axios'
-import store from '../../store/store'
+
 //所有api地址
 const urls = {
   'dev': {

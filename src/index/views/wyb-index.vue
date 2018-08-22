@@ -5,7 +5,7 @@
 </template>
 
 <script>
-import API from '../api'
+import API from '../../api'
 export default {
   name: 'wyb-index',
   methods: {
@@ -24,5 +24,8 @@ export default {
 </script>
 
 <style lang="scss">
-  
+  .wyb-index{
+    background-color: #fff;
+    height: 100%;
+  }
 </style>

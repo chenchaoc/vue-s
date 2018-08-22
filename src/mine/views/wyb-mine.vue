@@ -1,13 +1,13 @@
 <template>
-  <div class="wyb-static">
-    static
+  <div class="wyb-mine">
+    mine
   </div>
 </template>
 
 <script>
-  export default {
-    name: 'wyb-static'
-  }
+export default {
+  name: 'wyb-mine'
+}
 </script>
 
 <style lang="scss">

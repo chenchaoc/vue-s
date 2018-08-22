@@ -1,13 +1,18 @@
 <template>
   <div class="wyb-index">
-    123
+    index
   </div>
 </template>
 
 <script>
-  export default {
-    name: 'wyb-index'
+export default {
+  name: 'wyb-index',
+  methods: {
+    s() {
+      console.log(1)
+    }
   }
+}
 </script>
 
 <style lang="scss">

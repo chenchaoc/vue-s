@@ -17,4 +17,5 @@
     // http://babeljs.io/docs/plugins/transform-runtime/
     "transform-runtime"
   ],
+  "comments": true // webpack3 Magic Comments
 }

@@ -3,7 +3,7 @@
 * @Date: 2018-08-21 14:27:30
 * @Email: chenchao3@sh.superjia.com
 * @Last Modified by: chenchao
-* @Last Modified time: 2018-08-21 20:20:37
+* @Last Modified time: 2018-08-21 21:54:46
 */
 import webpack from 'webpack'
 import ProgressBarPlugin from 'progress-bar-webpack-plugin'
@@ -28,8 +28,7 @@ export default {
   output: {
     path: `${process.cwd()}/dist`,
     publicPath: envConfig.publicPath,
-    filename: '[name].js',
-    chunkFilename: '[name][id].js'
+    filename: '[name].js'
   },
   resolve: {
     extensions: ['.js', '.vue'],

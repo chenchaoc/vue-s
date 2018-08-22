@@ -2,14 +2,9 @@
 * @Author: chenchao
 * @Date: 2018-08-21 14:27:30
 * @Email: chenchao3@sh.superjia.com
-* @Last Modified by: chenchao
-* @Last Modified time: 2018-08-21 21:54:46
+ * @Last Modified by: chenchao
+ * @Last Modified time: 2018-08-22 13:23:50
 */
-import webpack from 'webpack'
-import ProgressBarPlugin from 'progress-bar-webpack-plugin'
-import HtmlWebpackPlugin from 'html-webpack-plugin'
-import chalk from 'chalk'
-import readline from 'readline'
 
 import loaders from './config/loaders.js'
 import alias from './config/alias.js'
@@ -31,7 +26,7 @@ export default {
     filename: '[name].js'
   },
   resolve: {
-    extensions: ['.js', '.vue'],
+    extensions: ['.js', '.vue', '.css', '.scss'],
     alias
   },
   module: {

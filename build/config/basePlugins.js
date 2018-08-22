@@ -2,8 +2,8 @@
 * @Author: chenchao
 * @Date: 2018-08-21 16:07:48
 * @Email: chenchao3@sh.superjia.com
-* @Last Modified by: chenchao
-* @Last Modified time: 2018-08-21 20:57:47
+ * @Last Modified by: chenchao
+ * @Last Modified time: 2018-08-22 13:45:28
 */
 
 import webpack from 'webpack'
@@ -44,7 +44,7 @@ export default [
     template: 'app.html',
     inject: 'body',  //默认插入body底部 选项：true, body, head, false
     minify: false,  //是否压缩html文件
-  }),  
+  }),
   new WebpackNotifierPlugin({
     title: '开发服务器',
     successSound: 'Submarine',

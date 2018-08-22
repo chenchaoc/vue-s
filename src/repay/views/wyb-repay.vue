@@ -12,6 +12,9 @@ export default {
     return {
       a: 1
     }
+  },
+  created() {
+    console.log(process.env.NODE_ENV)
   }
 }
 </script>

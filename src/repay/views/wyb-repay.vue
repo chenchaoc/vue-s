@@ -1,20 +1,16 @@
 <template>
   <div class="wyb-reapy">
-    repay
-    {{a}}
+    repay-还款
+    <common-tab></common-tab>
   </div>
 </template>
 
 <script>
+import CommonTab from '../../components/btab/common-tab'
 export default {
   name: 'wyb-repay',
-  data() {
-    return {
-      a: 1
-    }
-  },
-  created() {
-    console.log(process.env.NODE_ENV)
+  components: {
+    [CommonTab.name]: CommonTab
   }
 }
 </script>

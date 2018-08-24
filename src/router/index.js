@@ -3,7 +3,7 @@
 * @Date: 2018-08-21 14:45:56
 * @Email: chenchao3@sh.superjia.com
  * @Last Modified by: chenchao
- * @Last Modified time: 2018-08-22 18:29:10
+ * @Last Modified time: 2018-08-24 15:04:34
 */
 
 import routes from './routes.js'
@@ -48,7 +48,7 @@ router.afterEach((to, from) => {
   Vue.nextTick(() => {
     setTimeout(function() {
       store.dispatch('stopLoading')
-    }, 100)
+    }, 500)
   })
 })
 

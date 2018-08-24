@@ -1,13 +1,20 @@
 <template>
   <div class="wyb-index">
+    <m-header title="首页">
+      <div slot="header-right">问题</div>
+    </m-header>
     index
   </div>
 </template>
 
 <script>
 import API from '../../api'
+import Header from 'ui/header'
 export default {
   name: 'wyb-index',
+  components: {
+    [Header.name]: Header
+  },
   methods: {
     s() {
       console.log(1)
@@ -25,7 +32,7 @@ export default {
 
 <style lang="scss">
   .wyb-index{
-    background-color: #fff;
-    height: 100%;
+    padding-top: 48px;
+    min-height: 100%;
   }
 </style>

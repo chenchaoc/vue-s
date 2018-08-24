@@ -100,7 +100,7 @@ $k: 4;
   .f-#{$i} { font-size: 1px * $i; }
   $i: $i - 2;
 }
-// flex  1-4
+// flex  1 - 4
 @while $k >= 1 {
   .flex-#{$k} { flex: 1 * $k; }
   $k: $k - 1;

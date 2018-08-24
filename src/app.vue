@@ -3,7 +3,7 @@
 * @Date: 2018-08-21 14:35:59
 * @Email: chenchao3@sh.superjia.com
  * @Last Modified by: chenchao
- * @Last Modified time: 2018-08-22 17:47:41
+ * @Last Modified time: 2018-08-24 09:43:17
 */
 <template>
   <div id="app" class="app">
@@ -13,7 +13,7 @@
 </template>
 
 <script>
-import Loading from '@globalcomponents/loading/loading'
+import Loading from 'ui/loading/loading'
 export default {
   name: 'app',
   components: {

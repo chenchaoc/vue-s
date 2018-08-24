@@ -5,44 +5,11 @@
 .color-ff {
   color: #ffffff !important;
 }
-
 .color-21 {
   color: #212121 !important;
 }
-
 .color-75 {
   color: #757575 !important;
-}
-.f-10 {
-  font-size: 12px !important;
-}
-
-.f-12 {
-  font-size: 12px !important;
-}
-
-.f-14 {
-  font-size: 16px !important;
-}
-
-.f-16 {
-  font-size: 16px !important;
-}
-
-.f-18 {
-  font-size: 18px !important;
-}
-
-.f-20 {
-  font-size: 20px !important;
-}
-
-.f-22 {
-  font-size: 22px !important;
-}
-
-.fw-b {
-  font-weight: bold !important;
 }
 
 .bg-c-ff {
@@ -59,23 +26,23 @@
   }
 }
 
-.f-l {
+.f-l{
   float: left;
 }
 
-.f-r {
+.f-r{
   float: right;
 }
 
-.text-left {
+.text-left{
   text-align: left;
 }
 
-.text-right {
+.text-right{
   text-align: right;
 }
 
-.text-center {
+.text-center{
   text-align: center;
 }
 /*超过长度省略号*/
@@ -84,7 +51,7 @@
   white-space: nowrap;
   text-overflow: ellipsis;
 }
-.d-i-b {
+.d-i-b{
   display: inline-block;
 }
 .d-show {
@@ -103,15 +70,18 @@
       align-items: center;
       justify-content: center;
   }
-  &.center-a { //侧轴居中
+  &.center-v { //侧轴居中
       align-items: center;
   }
-  &.center-j { //主轴居中
+  &.center-h { //主轴居中
       justify-content: center;
   }
   &.between { //主轴两端对齐
       justify-content: space-between;
   }
+  &.around {
+    justify-content: space-around;
+  }  
   &.column { //主轴为垂直方向，起点在上沿
       flex-direction: column;
   }
@@ -119,51 +89,19 @@
       flex-wrap: row;
   }
 }
-
-.flex-1 {
-  flex: 1;
+//字体加粗
+.fw-b {
+  font-weight: bold;
 }
-
-.flex-2 {
-  flex: 2;
+$i: 30;
+$k: 4;
+//字体大小  10 - 30
+@while $i >= 10 {
+  .f-#{$i} { font-size: 1px * $i; }
+  $i: $i - 2;
 }
-
-.flex-3 {
-  flex: 3;
-}
-
-.flex-4 {
-  flex: 4;
-}
-
-.flex-5 {
-  flex: 5;
-}
-
-.flex-6 {
-  flex: 6;
-}
-
-.flex-7 {
-  flex: 7;
-}
-
-.flex-8 {
-  flex: 8;
-}
-
-.flex-9 {
-  flex: 9;
-}
-
-.flex-10 {
-  flex: 10;
-}
-
-.flex-11 {
-  flex: 11;
-}
-
-.flex-12 {
-  flex: 12;
+// flex  1-4
+@while $k >= 1 {
+  .flex-#{$k} { flex: 1 * $k; }
+  $k: $k - 1;
 }

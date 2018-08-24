@@ -47,15 +47,15 @@ export default {
   .m-btab-nav {
     display: flex;
     justify-content: space-between;
-    padding: 0 16px;
+    padding: 0 5%;
     box-shadow: 0 -3px 6px 0 rgba(0, 0, 0, 0.08);
   }
   .m-btab-nav-item {
     flex: 1;
     text-align: center;
     color: #757575;
-    padding-top: 6px;
-    padding-bottom: 3px;
+    padding-top: 5px;
+    padding-bottom: 2px;
     line-height: 1.3;
     &.btab-active {
       color: #3b82f3;

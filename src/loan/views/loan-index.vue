@@ -1,19 +1,25 @@
+/*
+ * @Author:  chenchao 
+ * @Date:  2018-08-24 17:40:44 
+ * @email:  chenchao3.sh@superjia.com 
+ * @Last Modified by: chenchao
+ * @Last Modified time: 2018-08-24 17:46:05
+ */
+
 <template>
   <div class="wyb-loan">
-    <m-header title="首页"></m-header>
     loan-借款
+    <div @click="goLoan">申请借款</div>
     <common-tab></common-tab>
   </div>
 </template>
 
 <script>
 import API from '../../api'
-import Header from 'ui/header'
 import CommonTab from '../../components/btab/common-tab'
 export default {
   name: 'wyb-loan',
   components: {
-    [Header.name]: Header,
     [CommonTab.name]: CommonTab
   },
   mounted() {
@@ -26,6 +32,9 @@ export default {
       }).catch((e) => {
         console.log(e)
       })
+    },
+    goLoan() {
+      this.$router.push({ name: 'wyb-loan-request' })
     }
   }
 }
@@ -33,7 +42,7 @@ export default {
 
 <style lang="scss">
   .wyb-loan{
-    padding-top: 48px;
+    padding-bottom: 48px;
     min-height: 100%;
   }
 </style>

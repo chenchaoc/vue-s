@@ -3,7 +3,7 @@
 * @Date: 2018-08-21 14:35:59
 * @Email: chenchao3@sh.superjia.com
  * @Last Modified by: chenchao
- * @Last Modified time: 2018-08-24 11:12:27
+ * @Last Modified time: 2018-08-24 17:53:36
 */
 <template>
   <div id="app" class="app">
@@ -13,7 +13,7 @@
 </template>
 
 <script>
-import Loading from 'ui/loading'
+import Loading from './components/loading'
 export default {
   name: 'app',
   components: {
@@ -28,7 +28,8 @@ export default {
 </script>
 
 <style lang="scss">
+  @import './global/style/color';
   .app {
-    min-height: 100%;
+    height: 100%;
   }
 </style>

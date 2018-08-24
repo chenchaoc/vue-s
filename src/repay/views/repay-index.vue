@@ -1,5 +1,13 @@
+/*
+ * @Author:  chenchao 
+ * @Date:  2018-08-24 17:40:03 
+ * @email:  chenchao3.sh@superjia.com 
+ * @Last Modified by:  chenchao 
+ * @Last Modified time:  2018-08-24 17:40:03 
+ */
+
 <template>
-  <div class="wyb-reapy">
+  <div class="wyb-reapy-index">
     repay-还款
     <common-tab></common-tab>
   </div>

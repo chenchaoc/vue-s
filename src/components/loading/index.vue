@@ -22,6 +22,7 @@ export default {
 <style lang="scss">
   .spinner-box{
     position: fixed;
+    z-index: 100;
     height: 60px;
     width: 60px;
     top: 50%;

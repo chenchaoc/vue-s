@@ -3,16 +3,16 @@
 * @Date: 2018-08-21 14:27:44
 * @Email: chenchao3@sh.superjia.com
  * @Last Modified by: chenchao
- * @Last Modified time: 2018-08-22 13:23:19
+ * @Last Modified time: 2018-08-25 13:06:23
 */
 
-import entry from './config/entry.js'
-import alias from './config/alias.js'
-import loaders from './config/loaders.js'
-import basePlugins from './config/basePlugins.js'
-import prodPlugins from './config/prodPlugins.js'
-import optimization from './config/optimization.js'
-import { envConfig } from './config/env.js'
+import entry from './config/entry'
+import alias from './config/alias'
+import loaders from './config/loaders'
+import basePlugins from './config/basePlugins'
+import prodPlugins from './config/prodPlugins'
+import optimization from './config/optimization'
+import { envConfig } from './config/env'
 
 export default {
   mode: 'production',

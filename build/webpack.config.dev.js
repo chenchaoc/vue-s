@@ -3,16 +3,16 @@
 * @Date: 2018-08-21 14:27:30
 * @Email: chenchao3@sh.superjia.com
  * @Last Modified by: chenchao
- * @Last Modified time: 2018-08-22 13:23:50
+ * @Last Modified time: 2018-08-25 13:10:17
 */
 
-import loaders from './config/loaders.js'
-import alias from './config/alias.js'
-import basePlugins from './config/basePlugins.js'
-import devPlugins from './config/devPlugins.js'
-import optimization from './config/optimization.js'
-import entry from './config/entry.js'
-import { envConfig } from './config/env.js'
+import loaders from './config/loaders'
+import alias from './config/alias'
+import basePlugins from './config/basePlugins'
+import devPlugins from './config/devPlugins'
+import optimization from './config/optimization'
+import entry from './config/entry'
+import { envConfig } from './config/env'
 
 export default {
   mode: 'development',

@@ -25,7 +25,7 @@ export default {
     z-index: 100;
     height: 60px;
     width: 60px;
-    top: 50%;
+    top: 45%;
     left: 50%;
     border-radius: 3px;
     transform: translate(-50%, -50%);
@@ -38,7 +38,7 @@ export default {
     position: relative;
     margin-top: 4px;
     height: 20px;
-    width: 20px;
+    width: 21px;
     .spinner-fade-item{
       width: 100%;
       height: 100%;
@@ -49,8 +49,8 @@ export default {
         content: '';
         display: block;
         margin: 0 auto;
-        width: 5%;
-        height: 25%;
+        width: 1px;
+        height: 5px;
         background-color: #fff;
         animation: circleFadeDelay 1s infinite ease-in-out both;     
       }       

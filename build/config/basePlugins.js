@@ -11,7 +11,7 @@ import ProgressBarPlugin from 'progress-bar-webpack-plugin'
 import chalk from 'chalk';
 import HtmlWebpackPlugin from 'html-webpack-plugin'
 import WebpackNotifierPlugin from 'webpack-notifier'
-import { envName } from './env.js'
+import { envName } from './env'
 const VueLoaderPlugin = require('vue-loader/lib/plugin')
 
 export default [

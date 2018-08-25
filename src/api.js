@@ -5,10 +5,10 @@ const apiMap = {
   homeList: 'homeList.action',
 }
 
-//例子  API('homeList', { a: 1 }, { headers: { OS: 'WECHAT' } })
+//example  API('homeList', { a: 1 }, { headers: { OS: 'WECHAT' } }).then(() => {}).catch(() => {})
 export default function(name, data = {}, options = {}) {
   const { showLoading = true, hideToast } = options
-  !store.state.isLoading && showLoading && store.dispatch('addLoading')
+  !store.state.isLoading && showLoading && store.dispatch('startLoading')
   return common.ajax(apiMap[name], data, options).then((res) => {
     store.state.isLoading && showLoading && store.dispatch('stopLoading')
     if (res.errorCode == 0) {

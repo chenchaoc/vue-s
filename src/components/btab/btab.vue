@@ -1,6 +1,6 @@
 <template>
   <div class="m-btab">
-    <ul class="m-btab-nav">
+    <ul class="m-btab-nav flex between">
       <li class="m-btab-nav-item" v-for="(item, i) in itemList" :key="i" :class="{'btab-active': item.selected}" @click="onNavClick(item, i)">
         <i class="iconfont f-20" :class="item.icon"></i>
         <div class="word f-12">{{item.label}}</div>
@@ -43,11 +43,8 @@ export default {
 }
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
   .m-btab-nav {
-    display: flex;
-    justify-content: space-between;
-    padding: 0 5%;
     box-shadow: 0 -3px 6px 0 rgba(0, 0, 0, 0.08);
   }
   .m-btab-nav-item {

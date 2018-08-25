@@ -3,7 +3,7 @@
 * @Date: 2018-08-21 14:45:56
 * @Email: chenchao3@sh.superjia.com
  * @Last Modified by: chenchao
- * @Last Modified time: 2018-08-24 15:04:34
+ * @Last Modified time: 2018-08-25 13:54:47
 */
 
 import routes from './routes.js'
@@ -37,7 +37,7 @@ const router = new VueRouter({
 
 router.beforeEach((to, from, next) => {
   Vue.nextTick(() => {
-    store.dispatch('addLoading')
+    store.dispatch('startLoading')
   })
   next()
 })

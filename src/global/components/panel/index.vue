@@ -23,7 +23,7 @@ export default {
   background-color: #fff;
   border-top: 1px solid #E8E8E8;
   >.panel-title {
-    padding: 14px 16px;
+    padding: 10px 16px;
     border-bottom: 1px solid #E8E8E8;
     font-size: 16px;
   }

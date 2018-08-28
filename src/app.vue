@@ -1,13 +1,6 @@
-/*
-* @Author: chenchao
-* @Date: 2018-08-21 14:35:59
-* @Email: chenchao3@sh.superjia.com
- * @Last Modified by: chenchao
- * @Last Modified time: 2018-08-25 12:48:01
-*/
 <template>
   <div id="app" class="app">
-    <m-loading :load="load"></m-loading>
+    <m-loading :load="isLoad"></m-loading>
     <router-view></router-view>
   </div>
 </template>
@@ -20,7 +13,7 @@ export default {
     [Loading.name]: Loading
   },
   computed: {
-    load() {
+    isLoad() {
       return this.$store.state.isLoading
     }
   }

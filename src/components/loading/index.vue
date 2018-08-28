@@ -62,7 +62,7 @@ export default {
           $line-rotation: $line-rotation + 30;
           &::before{
             animation-delay: $animation-delay;
-            $animation-delay: $animation-delay + 0.083;
+            $animation-delay: $animation-delay + 0.1;
           }                   
         }
       }

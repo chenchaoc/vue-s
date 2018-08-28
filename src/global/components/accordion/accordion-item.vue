@@ -65,7 +65,7 @@ export default {
   }
   &.accordion-item-opened {
     >.accordion-body {
-      padding: 10px 10px 10px 0;
+      padding: 10px 16px 10px 0;
       border-top: 1px solid #E8E8E8;
     }
     .accordion-icon {

@@ -3,7 +3,7 @@
 * @Date: 2018-08-21 15:24:53
 * @Email: chenchao3@sh.superjia.com
  * @Last Modified by: chenchao
- * @Last Modified time: 2018-08-24 11:15:00
+ * @Last Modified time: 2018-08-28 15:16:24
 */
 export default {
   vendor: [

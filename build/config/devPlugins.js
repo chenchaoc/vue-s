@@ -3,7 +3,7 @@
 * @Date: 2018-08-21 16:07:22
 * @Email: chenchao3@sh.superjia.com
  * @Last Modified by: chenchao
- * @Last Modified time: 2018-08-22 21:22:12
+ * @Last Modified time: 2018-08-26 14:03:46
 */
 import webpack from 'webpack'
 import { BundleAnalyzerPlugin }  from 'webpack-bundle-analyzer' //可视化查看打包后的文件

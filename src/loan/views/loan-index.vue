@@ -20,7 +20,7 @@ export default {
   },
   methods: {
     ajax() {
-      API('homeList', { a: 1 }, { headers: { OS: 'WECHAT' }, showLoading: true }).then((res) => {
+      API('homeList', { a: util.jsEncrypt('abc') }, { headers: { OS: 'WECHAT' } }).then((res) => {
         console.log(res)
       }).catch((e) => {
         console.log(e)

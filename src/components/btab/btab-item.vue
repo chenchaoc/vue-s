@@ -37,14 +37,5 @@ export default {
 </script>
 
 <style lang="scss">
-.m-btab-item {
-  position: absolute;
-  top: 0;
-  width: 100%;
-  transform: translateX(-100%);
-  &.item-active {
-    position: relative;
-    transform: translateX(0);
-  }
-}
+
 </style>

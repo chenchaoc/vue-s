@@ -61,9 +61,4 @@ export default {
   .m-btab-nav-inner {
     display: inline-block;
   }
-  .m-btab-body {
-    position: relative;
-    overflow: hidden;
-    background-color: #fff;
-  }
 </style>

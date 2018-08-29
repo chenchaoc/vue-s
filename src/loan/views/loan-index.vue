@@ -23,7 +23,7 @@ export default {
       API('homeList', { a: util.jsEncrypt('abc') }, { headers: { OS: 'WECHAT' } }).then((res) => {
         console.log(res)
       }).catch((e) => {
-        console.log(e)
+        console.log(e, 1)
       })
     },
     goLoan() {

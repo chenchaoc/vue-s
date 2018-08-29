@@ -5,7 +5,7 @@
     <div @click="ajax">发一个ajax看看</div>
     点击图片预览------->
     <img :src="myycy" alt="莫以宜春远" @click="showView(myycy)">
-    <img-view v-model="viewvisible" :url="imgUrlStr"></img-view>
+    <img-view v-model="imgViewModel" :url="imgViewUrl"></img-view>
     <common-tab></common-tab>
   </div>
 </template>
@@ -24,8 +24,8 @@ export default {
   data() {
     return {
       myycy,
-      viewvisible: false,
-      imgUrlStr: ''
+      imgViewModel: false,
+      imgViewUrl: ''
     }
   },
   mounted() {
@@ -43,8 +43,8 @@ export default {
       this.$router.push({ name: 'wyb-loan-request' })
     },
     showView(url) {
-      this.viewvisible = true
-      this.imgUrlStr = url
+      this.imgViewModel = true
+      this.imgViewUrl = url
     }
   }
 }

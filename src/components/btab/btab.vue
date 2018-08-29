@@ -1,7 +1,7 @@
 <template>
   <div class="m-btab">
     <ul class="m-btab-nav flex between">
-      <li class="m-btab-nav-item" v-for="(item, i) in itemList" :key="i" :class="{'btab-active': item.selected}" @click="onNavClick(item, i)">
+      <li class="m-btab-nav-item" v-for="(item, i) in itemList" :key="i" :class="{'btab-active': item.active}" @click="onNavClick(item, i)">
         <i class="iconfont f-20" :class="item.icon"></i>
         <div class="word f-12">{{item.label}}</div>
       </li>
@@ -15,9 +15,6 @@
 <script>
 export default {
   name: 'm-btab',
-  props: {
-    onTabClick: Function
-  },
   data() {
     return {
       itemList: []
@@ -27,17 +24,10 @@ export default {
     tabItemCreated(item) {
       this.itemList.push(item)
     },
-    tabItemDestroyed(item) {
-      this.itemList.splice(this.itemList.findIndex(it => it === item), 1)
-    },
     onNavClick(item, i) {
-      this.itemList.forEach(it => {
-        if (it !== item) {
-          it.selected = false
-        }
+      this.$router.replace({
+        name: item.btabKey
       })
-      item.selected = true
-      this.onTabClick && this.onTabClick(item, i)
     }
   }
 }

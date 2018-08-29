@@ -3,10 +3,16 @@
 * @Date: 2018-08-21 15:18:09
 * @Email: chenchao3@sh.superjia.com
  * @Last Modified by: chenchao
- * @Last Modified time: 2018-08-22 19:23:03
+ * @Last Modified time: 2018-08-29 17:09:08
 */
 import axios from 'axios'
-
+axios.interceptors.request.use(config => {
+  config.headers = Object.assign({}, { 'X-Requested-With': 'XMLHttpRequest' }, config.headers)
+  return config
+}, error => {
+  return Promise.reject(error)
+})
+axios.interceptors.response.use(response => response, error => Promise.reject(error.response))
 //所有api地址
 const urls = {
   'dev': {
@@ -51,16 +57,15 @@ export function changeDocTitle(title) {
  * @return {Promise}     [返回结果]
  */
 export function ajax(url, data = {}, options = {}) {
-  const {
-    method = 'post',
-    headers = {},
-  } = options
-  return axios({
-    method,
-    url: `${urls[process.env.GLOBAL_ENV].mApi}${url}`,
+  const defaultOptions = {
+    method: 'post',
+    headers: {},
+    timeout: 20000,
     data,
-    headers
-  }).then((res = {}) => {
+    url: `${urls[process.env.GLOBAL_ENV].mApi}${url}`
+  }
+  const ajaxOptions = Object.assign({}, defaultOptions, options)
+  return axios(ajaxOptions).then((res = {}) => {
     return res.data
   }).catch((error) => {
     return error.data

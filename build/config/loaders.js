@@ -3,7 +3,7 @@
 * @Date: 2018-08-21 17:08:12
 * @Email: chenchao3@sh.superjia.com
  * @Last Modified by: chenchao
- * @Last Modified time: 2018-08-22 15:44:23
+ * @Last Modified time: 2018-08-29 16:42:55
 */
 import MiniCssExtractPlugin from 'mini-css-extract-plugin' //从js分离出css,代替ExtractTextPlugin,webpack4官方推荐,支持非入口文件的css异步加载
 import eslintFriendlyFormatter from 'eslint-friendly-formatter'
@@ -20,7 +20,7 @@ function postcssPlugins() {
     }
   }
 }
-
+// 文件规则
 export default [
   {
     enforce: 'pre',

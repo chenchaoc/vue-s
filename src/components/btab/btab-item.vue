@@ -1,6 +1,5 @@
 <template>
   <div class="m-btab-item" :class="{'item-active': selected}">
-    <slot></slot>
   </div>
 </template>
 
@@ -28,10 +27,8 @@ export default {
     }
   },
   created() {
-    this.$parent.tabItemCreated(this)
-  },
-  destroyed() {
-    this.$parent.tabItemDestroyed(this)
+    const { label, icon, active, btabKey } = this
+    this.$parent.tabItemCreated({ label, icon, active, btabKey })
   }
 }
 </script>

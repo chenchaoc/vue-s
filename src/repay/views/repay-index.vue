@@ -1,11 +1,3 @@
-/*
- * @Author:  chenchao 
- * @Date:  2018-08-24 17:40:03 
- * @email:  chenchao3.sh@superjia.com 
- * @Last Modified by: chenchao
- * @Last Modified time: 2018-08-25 12:44:11
- */
-
 <template>
   <div class="wyb-reapy-index">
     repay-还款
@@ -15,7 +7,7 @@
 </template>
 
 <script>
-import CommonTab from '../../components/btab/common-tab'
+import CommonTab from '../../components/btab'
 export default {
   name: 'wyb-repay',
   components: {

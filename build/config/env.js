@@ -2,12 +2,12 @@
 * @Author: chenchao
 * @Date: 2018-08-21 16:52:21
 * @Email: chenchao3@sh.superjia.com
-* @Last Modified by: chenchao
-* @Last Modified time: 2018-08-21 16:52:39
+ * @Last Modified by: chenchao
+ * @Last Modified time: 2018-08-29 16:42:25
 */
 import { argv } from 'yargs'; //可以拿到npm run命令中的字段
 
-// 环境：test|beta|prod，默认prod
+// 环境：dev|test|beta|prod
 export const envName = ['dev', 'test', 'beta', 'prod'].find(e => argv[e])
 
 export const envConfig = {

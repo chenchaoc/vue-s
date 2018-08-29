@@ -43,9 +43,8 @@ export default {
   },
   methods: {
     goBack() {
-      console.log(document.getElementById('app').__vue__)
-      const { $router } = document.getElementById('app').__vue__
-      $router.back()
+      //const { $router } = document.getElementById('app').__vue__
+      this.$router.back()
     }
   }
 }

@@ -1,11 +1,3 @@
-/*
- * @Author:  chenchao 
- * @Date:  2018-08-24 17:40:28 
- * @email:  chenchao3.sh@superjia.com 
- * @Last Modified by:  chenchao 
- * @Last Modified time:  2018-08-24 17:40:28 
- */
-
 <template>
   <div class="wyb-mine-index">
     mine
@@ -14,7 +6,7 @@
 </template>
 
 <script>
-import CommonTab from '../../components/btab/common-tab'
+import CommonTab from '../../components/btab'
 export default {
   name: 'wyb-mine',
   components: {

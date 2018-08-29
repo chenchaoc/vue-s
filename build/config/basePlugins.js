@@ -3,7 +3,7 @@
 * @Date: 2018-08-21 16:07:48
 * @Email: chenchao3@sh.superjia.com
  * @Last Modified by: chenchao
- * @Last Modified time: 2018-08-22 13:45:28
+ * @Last Modified time: 2018-08-29 16:41:14
 */
 
 import webpack from 'webpack'
@@ -13,7 +13,7 @@ import HtmlWebpackPlugin from 'html-webpack-plugin'
 import WebpackNotifierPlugin from 'webpack-notifier'
 import { envName } from './env'
 const VueLoaderPlugin = require('vue-loader/lib/plugin')
-
+//公共插件
 export default [
   new VueLoaderPlugin(),
   new ProgressBarPlugin({

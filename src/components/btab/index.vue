@@ -1,5 +1,5 @@
 <template>
-  <m-btab class="wyb-btab" :on-tab-click="onTabClick">
+  <m-btab class="wyb-btab">
     <m-btab-item btab-key="wyb-loan-index" :active="$route.name == 'wyb-loan-index'" label="借款" icon="if-moneybag_border"></m-btab-item>
     <m-btab-item btab-key="wyb-repay-index" :active="$route.name == 'wyb-repay-index'" label="还款" icon="if-flow_card"></m-btab-item>
     <m-btab-item btab-key="wyb-mine-index" :active="$route.name == 'wyb-mine-index'" label="我的" icon="if-flow_password"></m-btab-item>
@@ -14,13 +14,6 @@
     components: {
       [Btab.name]: Btab,
       [BtabItem.name]: BtabItem
-    },
-    methods: {
-      onTabClick(item, i) {
-        this.$router.replace({
-          name: item.btabKey
-        })
-      }
     }
   }
 </script>

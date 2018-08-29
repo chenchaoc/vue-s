@@ -2,8 +2,8 @@
 * @Author: chenchao
 * @Date: 2018-08-21 20:56:24
 * @Email: chenchao3@sh.superjia.com
-* @Last Modified by: chenchao
-* @Last Modified time: 2018-08-22 11:35:38
+ * @Last Modified by: chenchao
+ * @Last Modified time: 2018-08-29 10:57:58
 */
 module.exports = {
   "root": true,
@@ -16,7 +16,6 @@ module.exports = {
       "globalReturn": true,
       "impliedStrict": true,
       "jsx": true,
-      "experimentalObjectRestSpread": true,
       "allowImportExportEverywhere": false
     }
   },

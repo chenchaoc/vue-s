@@ -12,7 +12,7 @@ import chalk from 'chalk';
 import HtmlWebpackPlugin from 'html-webpack-plugin'
 import WebpackNotifierPlugin from 'webpack-notifier'
 import { envName } from './env'
-const VueLoaderPlugin = require('vue-loader/lib/plugin')
+import VueLoaderPlugin from 'vue-loader/lib/plugin'
 //公共插件
 export default [
   new VueLoaderPlugin(),

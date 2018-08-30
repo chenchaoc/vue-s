@@ -106,6 +106,7 @@ button, input, optgroup, select, textarea {
 textarea {
   overflow: auto;
   resize: none;
+  -webkit-appearance: none;
 }
 
 input::-webkit-input-placeholder, textarea::-webkit-input-placeholder {

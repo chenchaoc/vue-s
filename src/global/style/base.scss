@@ -94,13 +94,13 @@
   font-weight: bold;
 }
 $i: 30;
-$k: 4;
+$k: 6;
 //字体大小  10 - 30
 @while $i >= 10 {
   .f-#{$i} { font-size: 1px * $i; }
   $i: $i - 2;
 }
-// flex  1 - 4
+// flex  1 - 6
 @while $k >= 1 {
   .flex-#{$k} { flex: 1 * $k; }
   $k: $k - 1;

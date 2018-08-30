@@ -3,7 +3,7 @@
 * @Date: 2018-08-21 15:18:09
 * @Email: chenchao3@sh.superjia.com
  * @Last Modified by: chenchao
- * @Last Modified time: 2018-08-29 17:09:08
+ * @Last Modified time: 2018-08-30 14:58:30
 */
 import axios from 'axios'
 axios.interceptors.request.use(config => {
@@ -14,7 +14,7 @@ axios.interceptors.request.use(config => {
 })
 axios.interceptors.response.use(response => response, error => Promise.reject(error.response))
 //所有api地址
-const urls = {
+const apiUrls = {
   'dev': {
     mApi: 'https://www.easy-mock.com/mock/5add7e95fe29a6045d0a7baa/study/',
     mUrl: 'http//10.7.248.232:6888/'
@@ -33,7 +33,7 @@ const urls = {
   }
 }
 // 注入window.pageConfig
-window.pageConfig = urls[process.env.GLOBAL_ENV]
+window.pageConfig = apiUrls[process.env.GLOBAL_ENV]
 /**
  * 设置文档标题
  */
@@ -62,7 +62,7 @@ export function ajax(url, data = {}, options = {}) {
     headers: {},
     timeout: 20000,
     data,
-    url: `${urls[process.env.GLOBAL_ENV].mApi}${url}`
+    url: `${apiUrls[process.env.GLOBAL_ENV].mApi}${url}`
   }
   const ajaxOptions = Object.assign({}, defaultOptions, options)
   return axios(ajaxOptions).then((res = {}) => {

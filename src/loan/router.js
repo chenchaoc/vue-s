@@ -3,11 +3,11 @@
 * @Date: 2018-08-21 14:47:21
 * @Email: chenchao3@sh.superjia.com
  * @Last Modified by: chenchao
- * @Last Modified time: 2018-08-24 17:11:16
+ * @Last Modified time: 2018-08-30 16:07:03
 */
 export default [{
   path: '/',
-  alias: ['/index', '/loan'],
+  alias: ['index', '/loan', '/loan/index'],
   name: 'wyb-loan-index',
   component: () => import(/* webpackChunkName: "wyb-loan-index" */ './views/loan-index.vue'),
   meta: {

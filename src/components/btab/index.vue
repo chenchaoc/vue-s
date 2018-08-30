@@ -24,6 +24,7 @@
     left: 0;
     bottom: 0;
     right: 0;
+    box-shadow: 0 -3px 6px 0 rgba(0, 0, 0, 0.08);    
     z-index: 1;
     background-color: #fff;
     max-width: 720px;

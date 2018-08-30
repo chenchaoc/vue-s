@@ -34,9 +34,6 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-  .m-btab-nav {
-    box-shadow: 0 -3px 6px 0 rgba(0, 0, 0, 0.08);
-  }
   .m-btab-nav-item {
     flex: 1;
     text-align: center;

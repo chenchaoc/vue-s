@@ -3,10 +3,10 @@
 * @Date: 2018-08-21 20:33:10
 * @Email: chenchao3@sh.superjia.com
  * @Last Modified by: chenchao
- * @Last Modified time: 2018-08-24 17:56:53
+ * @Last Modified time: 2018-08-30 14:04:03
 */
 export default [{
-  path: '/repay',
+  path: '/repay/index',
   name: 'wyb-repay-index',
   component: () => import(/* webpackChunkName: "wyb-repay-index" */ './views/repay-index'),
   meta: {

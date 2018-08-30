@@ -281,6 +281,9 @@
       fragment.appendChild($el)
       document.body.appendChild(fragment)
     },
+    destroyed() {
+      document.body.removeChild(this.$el)
+    }
   }
 </script>
 

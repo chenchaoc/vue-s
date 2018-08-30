@@ -1,5 +1,5 @@
 <template>
-  <div class="header-wrapper" :class="{ 'header-fixed': fixed}">
+  <div class="header-wrapper">
     <div class="header-back" v-if="showBack" @click="goBack">
       <i class="iconfont fw-b" :class="backIcon"></i>
       <span class="back-sp f-16">{{backText}}</span>
@@ -15,10 +15,6 @@
 export default {
   name: 'm-header',
   props: {
-    fixed: {
-      type: Boolean,
-      default: true
-    },
     showBack: {
       type: Boolean,
       default: true
@@ -52,6 +48,8 @@ export default {
 
 <style lang="scss" scoped>
   .header-wrapper{
+    position: sticky;
+    top: 0;
     height: 48px;
     line-height: 48px;
     background-color: #ffffff;
@@ -59,13 +57,6 @@ export default {
     text-align: center;
     max-width: 720px;
     margin: 0 auto;
-    &.header-fixed {
-      position: fixed;
-      top: 0;
-      right: 0;
-      left: 0;
-      z-index: 1;
-    }
     .header-back{
       position: absolute;
       top: 0;

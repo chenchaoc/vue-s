@@ -33,7 +33,7 @@ export default {
   },
   methods: {
     ajax() {
-      API('homeList', { a: util.jsEncrypt('abc') }, { headers: { OS: 'WECHAT' } }).then((res) => {
+      API('homeList', { a: util.jsEncrypt('abc') }, { headers: { OS: 'WECHAT' }, showLoading: false }).then((res) => {
         console.log(res)
       }).catch((e) => {
         console.log(e, 1)

@@ -12,8 +12,8 @@
       </m-accordion-item>
       <m-accordion-item title="如何确认支付宝转账是否成功？">
         还款后请及时在“借款详情”页查看还款状态，当页面显示“已还款”时，则表示还款成功，如有疑问请联系在线客户。（工作日9:30-18:00）
-      </m-accordion-item>        
-    </m-accordion>      
+      </m-accordion-item>
+    </m-accordion>
   </div>
 </template>
 
@@ -32,6 +32,6 @@ export default {
 
 <style lang="scss">
   .wyb-repay-way{
-    padding-top: 48px;
+
   }
 </style>

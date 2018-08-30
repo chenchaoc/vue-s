@@ -17,6 +17,6 @@ export default {
 <style lang="scss">
   @import '../../global/style/color';
   .wyb-loan-request{
-    padding-top: 48px;
+
   }
 </style>

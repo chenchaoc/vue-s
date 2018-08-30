@@ -3,13 +3,14 @@
  * @Date:  2018-08-22 13:11:37 
  * @email:  chenchao3.sh@superjia.com 
  * @Last Modified by: chenchao
- * @Last Modified time: 2018-08-30 11:35:29
+ * @Last Modified time: 2018-08-30 13:01:20
  */
 
 import MiniCssExtractPlugin from 'mini-css-extract-plugin'
 import OptimizeCssAssetsPlugin from 'optimize-css-assets-webpack-plugin'
 import CleanWebpackPlugin from 'clean-webpack-plugin'
 import ZipWebpackPlugin from 'zip-webpack-plugin'
+
 //生产插件
 export default [
   new MiniCssExtractPlugin({

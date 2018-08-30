@@ -3,7 +3,7 @@
  * @Date:  2018-08-22 13:11:37 
  * @email:  chenchao3.sh@superjia.com 
  * @Last Modified by: chenchao
- * @Last Modified time: 2018-08-29 16:43:28
+ * @Last Modified time: 2018-08-30 11:35:29
  */
 
 import MiniCssExtractPlugin from 'mini-css-extract-plugin'
@@ -13,7 +13,7 @@ import ZipWebpackPlugin from 'zip-webpack-plugin'
 //生产插件
 export default [
   new MiniCssExtractPlugin({
-    filename: '[name]_[contenthash:8].css'
+    filename: 'css/[name]_[contenthash:8].css'
   }),
   new OptimizeCssAssetsPlugin({  //css压缩去除注释
     cssProcessor: require('cssnano'),

@@ -2,8 +2,8 @@
 * @Author: chenchao
 * @Date: 2018-08-21 15:41:54
 * @Email: chenchao3@sh.superjia.com
-* @Last Modified by: chenchao
-* @Last Modified time: 2018-08-21 17:00:57
+ * @Last Modified by: chenchao
+ * @Last Modified time: 2018-08-30 21:18:29
 */
 
 import express from 'express'; //nodejs 框架
@@ -15,8 +15,8 @@ import webpackHotMiddleware from 'webpack-hot-middleware'; //热刷新
 import connectHistoryApiFallback from 'connect-history-api-fallback'; //热刷新不会丢失？
 import httpProxyMiddleware from 'http-proxy-middleware'; //http代理中间件
 
-import proxyConfig from '../config/proxyConfig.js';
-import webpackConfig from '../webpack.config.dev.js';
+import proxyConfig from '../config/proxyConfig';
+import webpackConfig from '../webpack.config.dev';
 
 const hotclient = ['webpack-hot-middleware/client?noInfo=true&reload=true'];
 const entry = webpackConfig.entry;

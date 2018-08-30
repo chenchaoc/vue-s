@@ -15,6 +15,7 @@ import API from '../../api'
 import CommonTab from '../../components/btab'
 import myycy from '@images/myycy.jpg'
 import ImgView from '../../components/imgView'
+import Toast from 'ui/toast'
 export default {
   name: 'wyb-loan',
   components: {
@@ -34,6 +35,7 @@ export default {
   methods: {
     ajax() {
       API('homeList', { a: util.jsEncrypt('abc') }, { headers: { OS: 'WECHAT' }, showLoading: false }).then((res) => {
+        Toast('请求成功')
         console.log(res)
       }).catch((e) => {
         console.log(e, 1)

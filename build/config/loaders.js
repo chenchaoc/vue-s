@@ -3,7 +3,7 @@
 * @Date: 2018-08-21 17:08:12
 * @Email: chenchao3@sh.superjia.com
  * @Last Modified by: chenchao
- * @Last Modified time: 2018-08-31 16:08:01
+ * @Last Modified time: 2018-08-31 18:11:43
 */
 import MiniCssExtractPlugin from 'mini-css-extract-plugin' //从js分离出css,代替ExtractTextPlugin,webpack4官方推荐,支持非入口文件的css异步加载
 import eslintFriendlyFormatter from 'eslint-friendly-formatter'
@@ -52,7 +52,11 @@ export default [
     }
   }, {
     test: /\.(sa|sc|c)ss$/,
-    //exclude: /node_modules/, //排除node_modules
+    include: [ //可以是正则也可以是路径字符串的数组
+      /src/,
+      /mint-ui/
+    ],
+    //exclude: /node_modules/, //排除node_modules,mint-ui引入单独文件时不能排除掉
     use: [
       {
         loader: envName == 'dev' ? 'vue-style-loader' : MiniCssExtractPlugin.loader

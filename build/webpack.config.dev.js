@@ -3,7 +3,7 @@
 * @Date: 2018-08-21 14:27:30
 * @Email: chenchao3@sh.superjia.com
  * @Last Modified by: chenchao
- * @Last Modified time: 2018-08-25 13:10:17
+ * @Last Modified time: 2018-08-31 18:21:02
 */
 
 import loaders from './config/loaders'
@@ -26,7 +26,7 @@ export default {
     filename: '[name].js'
   },
   resolve: {
-    extensions: ['.js', '.vue', '.css', '.scss'],
+    extensions: ['.js', '.vue', '.json'],
     alias
   },
   module: {

@@ -3,7 +3,7 @@
 * @Date: 2018-08-21 14:27:44
 * @Email: chenchao3@sh.superjia.com
  * @Last Modified by: chenchao
- * @Last Modified time: 2018-08-30 13:03:22
+ * @Last Modified time: 2018-08-31 18:21:15
 */
 
 import entry from './config/entry'
@@ -28,7 +28,7 @@ export default {
     //chunkFilename: '[name][id].js'
   },
   resolve: {
-    extensions: [".js", ".vue", ".css", ".scss"],
+    extensions: [".js", ".vue", ".json"],
     alias
   },
   module: {

@@ -3,17 +3,17 @@
 * @Date: 2018-08-21 15:24:53
 * @Email: chenchao3@sh.superjia.com
  * @Last Modified by: chenchao
- * @Last Modified time: 2018-08-29 16:41:38
+ * @Last Modified time: 2018-08-31 09:58:30
 */
 //入口文件
 export default {
-  vendor: [
+  'wyb-vendor': [
     'vue',
     'vuex',
     'vue-router',
     'axios'
   ],
-  common: [
+  'wyb-common': [
     './global/common/common.js',
     './global/util/util.js',
     './global/iconfont/iconfont.css',

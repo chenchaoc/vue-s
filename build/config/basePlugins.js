@@ -3,7 +3,7 @@
 * @Date: 2018-08-21 16:07:48
 * @Email: chenchao3@sh.superjia.com
  * @Last Modified by: chenchao
- * @Last Modified time: 2018-08-30 13:13:55
+ * @Last Modified time: 2018-08-31 15:02:15
 */
 
 import webpack from 'webpack'
@@ -39,7 +39,7 @@ export default [
     common: 'common'
   }),
   new HtmlWebpackPlugin({  //自动生成html文件并载入打包后的css js
-    title: '无忧宝',
+    //title: '无忧宝',
     filename: 'index.html',
     template: 'app.html',
     inject: 'body',  //默认插入body底部 选项：true, body, head, false

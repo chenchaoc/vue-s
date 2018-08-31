@@ -3,7 +3,7 @@
 * @Date: 2018-08-21 15:24:53
 * @Email: chenchao3@sh.superjia.com
  * @Last Modified by: chenchao
- * @Last Modified time: 2018-08-31 09:58:30
+ * @Last Modified time: 2018-08-31 15:17:52
 */
 //入口文件
 export default {
@@ -11,7 +11,8 @@ export default {
     'vue',
     'vuex',
     'vue-router',
-    'axios'
+    'axios',
+    'fastclick'
   ],
   'wyb-common': [
     './global/common/common.js',

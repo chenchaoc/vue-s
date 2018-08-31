@@ -3,7 +3,7 @@
 * @Date: 2018-08-21 17:08:12
 * @Email: chenchao3@sh.superjia.com
  * @Last Modified by: chenchao
- * @Last Modified time: 2018-08-30 13:55:34
+ * @Last Modified time: 2018-08-31 16:08:01
 */
 import MiniCssExtractPlugin from 'mini-css-extract-plugin' //从js分离出css,代替ExtractTextPlugin,webpack4官方推荐,支持非入口文件的css异步加载
 import eslintFriendlyFormatter from 'eslint-friendly-formatter'
@@ -41,7 +41,7 @@ export default [
     use: {
       loader: 'vue-loader'
     }   
-  }, { //模块规则
+  }, {
     test: /\.js$/, //匹配文件
     exclude: /node_modules/, //排除node_modules
     use: {
@@ -52,7 +52,7 @@ export default [
     }
   }, {
     test: /\.(sa|sc|c)ss$/,
-    exclude: /node_modules/, //排除node_modules
+    //exclude: /node_modules/, //排除node_modules
     use: [
       {
         loader: envName == 'dev' ? 'vue-style-loader' : MiniCssExtractPlugin.loader

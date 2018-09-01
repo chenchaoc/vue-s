@@ -3,7 +3,7 @@
 * @Date: 2018-08-21 16:05:59
 * @Email: chenchao3@sh.superjia.com
  * @Last Modified by: chenchao
- * @Last Modified time: 2018-09-01 12:10:07
+ * @Last Modified time: 2018-09-01 12:41:06
 */
 //提取重复引用文件 
 //runtimeChunk，将入口提取出来，这样入口文件可以很快加载，并且当哪里有改动的时候，只有改动的地方和这个文件有变化
@@ -27,6 +27,11 @@ export default {
         test: /[\\/]src[\\/]/,
         priority: -5,
         reuseExistingChunk: true
+      },
+      vendors: {
+        minChunks: 2,
+        priority: -15,
+        test: (module, chunks) => !(/mint-ui/.test(module.context)),        
       }
     }
   }

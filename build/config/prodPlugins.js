@@ -3,18 +3,31 @@
  * @Date:  2018-08-22 13:11:37 
  * @email:  chenchao3.sh@superjia.com 
  * @Last Modified by: chenchao
- * @Last Modified time: 2018-08-30 13:01:20
+ * @Last Modified time: 2018-09-01 10:06:39
  */
 
 import MiniCssExtractPlugin from 'mini-css-extract-plugin'
 import OptimizeCssAssetsPlugin from 'optimize-css-assets-webpack-plugin'
 import CleanWebpackPlugin from 'clean-webpack-plugin'
 import ZipWebpackPlugin from 'zip-webpack-plugin'
+import ImageminPlugin from 'imagemin-webpack-plugin'
+import ManifestPlugin from 'webpack-plugin-manifest'
 
 //生产插件
 export default [
   new MiniCssExtractPlugin({
     filename: 'css/[name]_[contenthash:8].css'
+  }),
+  new ImageminPlugin({  //图片压缩插件
+    test: /\.(jp[e]?g|png|gif|svg)$/i,
+    disable: false,
+    pngquant: {
+      quality: '90'
+    }            
+  }),  
+  new ManifestPlugin({ //文件路径映射
+    fileName: 'manifest.json',
+    basePath: `${process.cwd()}/dist/`
   }),
   new OptimizeCssAssetsPlugin({  //css压缩去除注释
     cssProcessor: require('cssnano'),

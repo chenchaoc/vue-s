@@ -5,16 +5,16 @@
     <div @click="ajax">发一个ajax看看</div>
     点击图片预览------->
     <img :src="myycy" alt="莫以宜春远" @click="showView(myycy)">
-    <img-view v-model="imgViewModel" :url="imgViewUrl"></img-view>
+    <m-img-view v-model="imgViewModel" :url="imgViewUrl"></m-img-view>
     <common-tab></common-tab>
   </div>
 </template>
 
 <script>
 import API from '../../api'
-import CommonTab from '../../components/btab'
+import CommonTab from '../../components/Btab'
 import myycy from '@images/myycy.jpg'
-import ImgView from '../../components/imgView'
+import ImgView from '../../components/ImgView'
 import Toast from 'ui/toast'
 export default {
   name: 'wyb-loan',
@@ -34,7 +34,7 @@ export default {
   },
   methods: {
     ajax() {
-      API('homeList', { a: util.jsEncrypt('abc') }, { headers: { OS: 'WECHAT' }, showLoading: false }).then((res) => {
+      API('homeList', { a: util.jsEncrypt('abc') }, { headers: { OS: 'WECHAT' }, showLoading: true }).then((res) => {
         Toast('请求成功')
         console.log(res)
       }).catch((e) => {

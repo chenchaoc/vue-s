@@ -6,7 +6,7 @@
 </template>
 
 <script>
-import Loading from './components/loading'
+import Loading from './components/Loading'
 export default {
   name: 'app',
   components: {

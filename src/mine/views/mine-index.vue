@@ -11,7 +11,7 @@
 </template>
 
 <script>
-import CommonTab from '../../components/btab'
+import CommonTab from '../../components/Btab'
 import { Picker, Popup } from 'mint-ui'
 import myaddress from '../component/pca.json'
 export default {

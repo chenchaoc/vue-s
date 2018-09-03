@@ -7,7 +7,7 @@
 </template>
 
 <script>
-import CommonTab from '../../components/btab'
+import CommonTab from '../../components/Btab'
 export default {
   name: 'wyb-repay',
   components: {

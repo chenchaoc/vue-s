@@ -3,7 +3,7 @@
 * @Date: 2018-08-21 14:45:56
 * @Email: chenchao3@sh.superjia.com
  * @Last Modified by: chenchao
- * @Last Modified time: 2018-09-01 12:12:03
+ * @Last Modified time: 2018-09-03 15:10:27
 */
 
 import routes from './routes'
@@ -49,7 +49,7 @@ router.afterEach((to, from) => {
   Vue.nextTick(() => {
     setTimeout(function() {
       store.dispatch('stopLoading')
-    }, 500)
+    }, 200)
   })
 })
 

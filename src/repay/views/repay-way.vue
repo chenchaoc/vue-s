@@ -6,7 +6,7 @@
         请确保银行卡内余额充足，然后在平台还款页面点击主动还款，点击获取验证码，将您收到的验证码填写进去，即完成还款。
       </m-accordion-item>
     </m-accordion>
-    <m-accordion title="支付宝转账">
+    <m-accordion title="支付宝转账" v-for="i in 10" :key="i">
       <m-accordion-item title="如何进行支付宝转账？">
         进入支付宝首页，点击“转账”，选择“转到支付宝账户”，输入支付宝账户ali7056@tom.com,点击“下一步”，输入转账金额，并将姓名和注册手机号添加到备注中，点击“确认转账”，输入支付密码即可完成还款。
       </m-accordion-item>
@@ -18,7 +18,7 @@
 </template>
 
 <script>
-import Header from '../../components/header'
+import Header from '../../components/Header'
 import { Accordion, AccordionItem } from 'ui/accordion'
 import { Indicator, Toast, TabContainer, TabContainerItem } from 'mint-ui'
 export default {

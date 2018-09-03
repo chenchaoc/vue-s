@@ -3,7 +3,7 @@
  * @Date:  2018-08-28 14:39:19
  * @email:  chenchao3.sh@superjia.com
  * @Last Modified by: chenchao
- * @Last Modified time: 2018-08-30 21:31:07
+ * @Last Modified time: 2018-09-03 15:41:44
  */
 
 import store from './store/store'
@@ -13,7 +13,7 @@ const apiMap = {
   homeList: 'homeList.action',
 }
 
-//example  API('homeList', { a: 1 }, { headers: { OS: 'WECHAT' } }).then(() => {}).catch(() => {})
+//example  API('homeList', { a: 1 }, { headers: { OS: 'WECHAT' }, showLoading: false, hideToast: true }).then(() => {}).catch(() => {})
 export default function(name, data = {}, options = {}) {
   const { showLoading = true, hideToast = false } = options
   !store.state.isLoading && showLoading && store.dispatch('startLoading')

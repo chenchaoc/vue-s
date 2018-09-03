@@ -3,7 +3,7 @@
 * @Date: 2018-08-21 15:18:09
 * @Email: chenchao3@sh.superjia.com
  * @Last Modified by: chenchao
- * @Last Modified time: 2018-08-30 14:58:30
+ * @Last Modified time: 2018-09-03 10:06:17
 */
 import axios from 'axios'
 axios.interceptors.request.use(config => {
@@ -59,7 +59,6 @@ export function changeDocTitle(title) {
 export function ajax(url, data = {}, options = {}) {
   const defaultOptions = {
     method: 'post',
-    headers: {},
     timeout: 20000,
     data,
     url: `${apiUrls[process.env.GLOBAL_ENV].mApi}${url}`

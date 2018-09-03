@@ -15,7 +15,7 @@
     window.setTimeout(callback, 60)
   }
   export default {
-    name: 'img-view',
+    name: 'm-img-view',
     props: {
       value: Boolean,
       url: String,

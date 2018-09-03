@@ -15,7 +15,7 @@ import API from '../../api'
 import CommonTab from '../../components/Btab'
 import myycy from '@images/myycy.jpg'
 import ImgView from '../../components/ImgView'
-import Toast from 'ui/toast'
+import { Toast } from 'mint-ui'
 export default {
   name: 'wyb-loan',
   components: {

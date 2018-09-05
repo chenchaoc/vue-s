@@ -1,7 +1,6 @@
 .color-base {
   color: #3b82f3 !important;
 }
-
 .color-ff {
   color: #ffffff !important;
 }
@@ -11,37 +10,15 @@
 .color-75 {
   color: #757575 !important;
 }
-
 .bg-c-ff {
   background-color: #fff !important;
 }
-/* 清除浮动 */
-.clearfix {
-  &:before, &:after {
-      content: '';
-      display: table;
-  }
-  &:after {
-      clear: both;
-  }
-}
-
-.f-l{
-  float: left;
-}
-
-.f-r{
-  float: right;
-}
-
 .text-left{
   text-align: left;
 }
-
 .text-right{
   text-align: right;
 }
-
 .text-center{
   text-align: center;
 }

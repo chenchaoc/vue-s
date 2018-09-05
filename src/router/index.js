@@ -3,16 +3,19 @@
 * @Date: 2018-08-21 14:45:56
 * @Email: chenchao3@sh.superjia.com
  * @Last Modified by: chenchao
- * @Last Modified time: 2018-09-03 15:10:27
+ * @Last Modified time: 2018-09-05 14:40:29
 */
 
 import routes from './routes'
 import Vue from 'vue'
 import VueRouter from 'vue-router'
 import store from '../store/store'
+import demo from '../components/router'
 
 Vue.use(VueRouter)
-
+if (process.env.GLOBAL_ENV == 'dev') {
+  routes.push(...demo)
+}
 const router = new VueRouter({
   mode: 'history',
   routes,

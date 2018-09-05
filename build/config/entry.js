@@ -3,18 +3,18 @@
 * @Date: 2018-08-21 15:24:53
 * @Email: chenchao3@sh.superjia.com
  * @Last Modified by: chenchao
- * @Last Modified time: 2018-09-01 10:56:33
+ * @Last Modified time: 2018-09-04 14:29:03
 */
 //入口文件
 export default {
-  'wyb-vendor': [
+  'wyb_vendor': [
     'vue',
     'vuex',
     'vue-router',
     'axios',
     'fastclick'
   ],
-  'wyb-common': [
+  'wyb_common': [
     './global/common/common.js',
     './global/util/util.js',
     './global/iconfont/iconfont.css',

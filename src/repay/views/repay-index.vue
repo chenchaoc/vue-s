@@ -11,7 +11,7 @@ import CommonTab from '../../components/Btab'
 export default {
   name: 'wyb-repay',
   components: {
-    [CommonTab.name]: CommonTab
+    [CommonTab.name]: CommonTab,
   },
   methods: {
     goKnow() {

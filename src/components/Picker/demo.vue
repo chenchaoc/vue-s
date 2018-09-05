@@ -1,8 +1,8 @@
 <template>
   <div class="picker-demo">
-    <mt-cell title="打开选择器" @click.native="a" is-link></mt-cell>
+    <mt-cell title="打开选择器" @click.native="showPicker" is-link></mt-cell>
     <mt-cell title="当前选中" :value="currentValue && currentValue.text"></mt-cell>
-    <m-picker :slots="solts" :valueKey="valueKey" :visibleItemCount="5" ref="picker" @change="change" name="jybd"></m-picker>
+    <m-picker :slots="solts" :valueKey="valueKey" :visibleItemCount="5" ref="picker" @change="change" @confirm="confirm" name="jybd"></m-picker>
   </div>
 </template>
 
@@ -40,12 +40,15 @@ export default {
     }
   },
   methods: {
-    a() {
+    showPicker() {
       this.$refs.picker.open()
     },
-    change(v) {
+    confirm(v) {
+      console.log(v)
       this.currentValue = v[0]
-      console.log(this.currentValue)
+    },
+    change(v) {
+      console.log(v)
     }
   }
 }

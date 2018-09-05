@@ -3,7 +3,7 @@
 * @Date: 2018-08-21 14:45:56
 * @Email: chenchao3@sh.superjia.com
  * @Last Modified by: chenchao
- * @Last Modified time: 2018-09-05 14:40:29
+ * @Last Modified time: 2018-09-05 19:29:54
 */
 
 import routes from './routes'
@@ -13,7 +13,8 @@ import store from '../store/store'
 import demo from '../components/router'
 
 Vue.use(VueRouter)
-if (process.env.GLOBAL_ENV == 'dev') {
+
+if (process.env.NODE_ENV == 'development') {
   routes.push(...demo)
 }
 const router = new VueRouter({

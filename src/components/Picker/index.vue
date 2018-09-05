@@ -1,5 +1,5 @@
 <template>
-  <mt-popup v-model="visible" position="bottom" class="m-picker" style="width: 100%;">
+  <mt-popup v-model="visible" position="bottom" class="m-picker" style="width: 100%;" @touchmove.native.prevent>
     <mt-picker
       :slots="slots"
       ref="picker"

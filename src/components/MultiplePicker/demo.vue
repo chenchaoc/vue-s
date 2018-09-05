@@ -20,23 +20,27 @@ export default {
       list: (new PickerList())
     }
   },
+  mounted() {
+    console.log(process.env.GLOBAL_ENV)
+  },
   methods: {
     goSumbit() {
       let params = {}
-      for (let i in this.list) {
-        if (this.list[i].value == '' && this.list[i].isMust) {
-          Toast(this.list[i].error)
+      const { list } = this
+      for (let i in list) {
+        if (list[i].value == '' && list[i].isMust) {
+          Toast(list[i].error)
           return
         }
       }
-      for (let k in this.list) {
-        if (this.list[k].reg && this.list[k].isMust && !(this.list[k].reg.test(this.list[k].value))) {
-          Toast(this.list[k].regError)
+      for (let k in list) {
+        if (list[k].reg && list[k].isMust && !(list[k].reg.test(list[k].value))) {
+          Toast(list[k].regError)
           return
         }
       }
-      for (let j in this.list) {
-        params[this.list[j].name] = this.list[j].value
+      for (let j in list) {
+        params[list[j].name] = list[j].value
       }
       console.log(params)
     }

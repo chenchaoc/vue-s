@@ -43,11 +43,6 @@ export default {
       type: Array
     }
   },
-  data() {
-    return {
-
-    }
-  },
   methods: {
     chooseConfirm(value, name, type) { //slots选择
       this.list.forEach((item, index) => {

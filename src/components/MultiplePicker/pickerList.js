@@ -135,7 +135,8 @@ export default function () {
     placeholder: '', //默认文案
     value: '', //上传后端的值
     showValue: '', //前端展示的value值
-    startDate: new Date(),
+    startDate: new Date(new Date().getTime() - 20 * 365 * 24 * 60 * 60 * 1000 - 5 * 24 * 60 * 60 * 1000),
+    endDate: new Date(new Date().getTime() + 20 * 365 * 24 * 60 * 60 * 1000 + 5 * 24 * 60 * 60 * 1000),
     disabled: false, //是否可修改
     showIcon: true, //是否展示右箭头点击选择
     reg: '', //正则

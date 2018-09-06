@@ -82,3 +82,8 @@ $k: 6;
   .flex-#{$k} { flex: 1 * $k; }
   $k: $k - 1;
 }
+//重置mint-ui Cell右箭头的大小
+.mint-cell-allow-right:after{
+  width: 10px!important;
+  height: 10px!important;
+}

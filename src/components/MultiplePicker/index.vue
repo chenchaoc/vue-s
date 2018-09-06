@@ -3,12 +3,12 @@
     <div class="picker-cell flex" v-for="(item, index) in list" :key="index">
       <span class="cell-title" v-if="item.title">{{item.title}}</span>
       <input class="flex-1 text-right" v-if="['text', 'tel'].includes(item.type)" :type="item.type" :maxlength="item.maxlength"  :placeholder="item.placeholder" v-model="item.value"  :disabled="item.disabled">
-      <span class="cell-choose flex-1 text-right" v-if="['datetime', 'date', 'choose'].includes(item.type)" @click="openPicker(item.name, item.value)">
+      <span class="cell-choose flex-1 text-right" v-if="['datetime', 'date', 'choose'].includes(item.type)" @click="openPicker(item.name, item.value, item.disabled)">
         <span v-if="item.showValue">{{item.showValue}}</span>
         <span v-else class="no-value">请选择</span>
       </span>
       <textarea v-if="item.type == 'textarea'" cols="100" rows="5" :placeholder="item.placeholder" v-model="item.value" :disabled="item.disabled"></textarea>
-      <i class="cell-icon iconfont if-arrow-right color-75" v-if="item.showIcon"></i>
+      <i class="cell-icon iconfont if-arrow-right color-75" v-if="item.showIcon && !item.disabled"></i>
       <mt-datetime-picker
         v-if="['date', 'datetime'].includes(item.type)"
         :ref="item.name"
@@ -30,12 +30,12 @@
 </template>
 
 <script>
-import PopPicker from '../Picker'
+import MPicker from '../Picker'
 import { DatetimePicker } from 'mint-ui'
 export default {
   name: 'm-multiple-picker',
   components: {
-    [PopPicker.name]: PopPicker,
+    [MPicker.name]: MPicker,
     [DatetimePicker.name]: DatetimePicker
   },
   props: {
@@ -62,7 +62,8 @@ export default {
         }
       }
     },
-    openPicker(name, value) {
+    openPicker(name, value, disabled) {
+      if (disabled) return
       this.$refs[name][0].open()
     }
   }

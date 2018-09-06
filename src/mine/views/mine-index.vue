@@ -13,7 +13,7 @@
 <script>
 import CommonTab from '../../components/Btab'
 import { Picker, Popup } from 'mint-ui'
-import myaddress from '../component/pca.json'
+import myaddress from '../components/pca.json'
 export default {
   name: 'wyb-mine',
   components: {

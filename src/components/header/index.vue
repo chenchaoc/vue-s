@@ -1,10 +1,10 @@
 <template>
   <div class="header-wrapper">
     <div class="header-back" v-if="showBack" @click="goBack">
-      <i class="iconfont fw-b" :class="backIcon"></i>
+      <i class="iconfont fw-b f-16" :class="backIcon"></i>
       <span class="back-sp f-16">{{backText}}</span>
     </div>
-    <div v-if="title" class="header-center f-16">{{titleData}}</div>
+    <div v-if="title" class="header-center f-16 fw-b">{{titleData}}</div>
     <div class="header-right f-16">
       <slot name="header-right"></slot>
     </div>
@@ -62,21 +62,17 @@ export default {
       top: 0;
       left: 0;
       text-align: center;
-      padding: 0 10px;
+      padding-left: 10px;
       display: flex;
     }
     .header-center{
-      font-weight: 500;
-      font-family: Helvetica, Avenir, Arial, sans-serif;
-      font-size: 17px;
-      color: #212121;
       text-align: center;
     }
     .header-right{
       position: absolute;
       top: 0;
       right: 0;
-      padding: 0 10px;
+      padding-right: 16px;
     }
   }
 </style>

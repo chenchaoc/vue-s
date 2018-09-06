@@ -1,6 +1,9 @@
 <template>
   <div class="demo-multiple-picker">
-    <m-multiple-picker :list="list"></m-multiple-picker>
+    <m-header title="demo-multiple-picker"></m-header>
+    <div class="multiple-picker-wrapper">
+      <m-multiple-picker :list="list"></m-multiple-picker>
+    </div>
     <div class="btn-wrapper">
       <div class="btn color-ff" @click="goSumbit">提交</div>
     </div>
@@ -10,10 +13,12 @@
 <script>
 import MultiplePicker from './index'
 import PickerList from './pickerList'
+import Header from '../Header/index'
 import { Toast } from 'mint-ui'
 export default {
   components: {
-    [MultiplePicker.name]: MultiplePicker
+    [MultiplePicker.name]: MultiplePicker,
+    [Header.name]: Header
   },
   data() {
     return {
@@ -21,7 +26,6 @@ export default {
     }
   },
   mounted() {
-    console.log(process.env.GLOBAL_ENV)
   },
   methods: {
     goSumbit() {
@@ -34,7 +38,7 @@ export default {
         }
       }
       for (let k in list) {
-        if (list[k].reg && list[k].isMust && !(list[k].reg.test(list[k].value))) {
+        if (list[k].isMust && list[k].reg && !(list[k].reg.test(list[k].value))) {
           Toast(list[k].regError)
           return
         }
@@ -49,7 +53,9 @@ export default {
 </script>
 
 <style>
-  @import '../../global/style/color';
+  .multiple-picker-wrapper{
+    margin-top: 8px;
+  }
   .btn-wrapper{
     padding: 16px;
   }

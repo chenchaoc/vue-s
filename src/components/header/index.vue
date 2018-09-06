@@ -49,6 +49,7 @@ export default {
 <style lang="scss" scoped>
   .header-wrapper{
     position: sticky;
+    z-index: 100;
     top: 0;
     height: 48px;
     line-height: 48px;

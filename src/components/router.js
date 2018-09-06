@@ -3,7 +3,7 @@
  * @Date:  2018-09-05 11:40:48
  * @email:  chenchao3.sh@superjia.com
  * @Last Modified by: chenchao
- * @Last Modified time: 2018-09-06 18:11:15
+ * @Last Modified time: 2018-09-06 18:43:22
  */
 
 export default [{
@@ -47,5 +47,12 @@ export default [{
   component: () => import(/* webpackChunkName: "wyb-demo-img-view" */ './ImgView/demo.vue'),
   meta: {
     title: '图片预览'
+  }
+}, {
+  path: '/demo/btab',
+  name: 'wyb-demo-btab',
+  component: () => import(/* webpackChunkName: "wyb-demo-btab" */ './Btab/demo.vue'),
+  meta: {
+    title: '底部tab'
   }
 }]

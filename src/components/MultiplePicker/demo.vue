@@ -13,7 +13,7 @@
 <script>
 import MultiplePicker from './index'
 import PickerList from './pickerList'
-import Header from '../Header/index'
+import Header from '../Header'
 import { Toast } from 'mint-ui'
 export default {
   components: {

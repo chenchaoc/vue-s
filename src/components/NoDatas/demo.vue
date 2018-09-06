@@ -2,16 +2,19 @@
   <div class="demo-nodatas">
     <m-header title="demo-nodatas"></m-header>
     <m-no-datas></m-no-datas>
+    <btab-demo-common></btab-demo-common>
   </div>
 </template>
 
 <script>
 import NoDatas from './index'
-import Header from '../Header/index'
+import Header from '../Header'
+import BtabDemoCommon from '../Btab/demo-common'
 export default {
   components: {
     [NoDatas.name]: NoDatas,
-    [Header.name]: Header
+    [Header.name]: Header,
+    BtabDemoCommon
   }
 }
 </script>

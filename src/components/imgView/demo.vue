@@ -9,7 +9,7 @@
 </template>
 
 <script>
-import Header from '../Header/index'
+import Header from '../Header'
 import ImgView from './index'
 import myycy from '@images/myycy.jpg'
 export default {

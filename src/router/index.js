@@ -3,7 +3,7 @@
 * @Date: 2018-08-21 14:45:56
 * @Email: chenchao3@sh.superjia.com
  * @Last Modified by: chenchao
- * @Last Modified time: 2018-09-06 19:04:37
+ * @Last Modified time: 2018-09-07 11:28:25
 */
 
 import routes from './routes'
@@ -14,13 +14,13 @@ import demo from '../components/router'
 
 Vue.use(VueRouter)
 
-if (process.env.NODE_ENV == 'development') {
-  routes.push(...demo)
-}
+// if (process.env.NODE_ENV == 'development') {
+routes.push(...demo)
+// }
 const router = new VueRouter({
   mode: 'history',
   routes,
-  //base: '/vp/', //基路径
+  base: '/vp/', //基路径
   //模拟滚动行为,页面之间切换回到原位置
   scrollBehavior (to, from, savedPosition) {
     if (savedPosition) {

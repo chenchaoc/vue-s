@@ -20,18 +20,18 @@
 <script>
 import Header from '../../components/Header'
 import { Accordion, AccordionItem } from 'ui/accordion'
-import { Indicator, Toast, TabContainer, TabContainerItem } from 'mint-ui'
+// import { Indicator, Toast, TabContainer, TabContainerItem } from 'mint-ui'
 export default {
   name: 'wyb-repay-way',
   components: {
     [Header.name]: Header,
     [Accordion.name]: Accordion,
     [AccordionItem.name]: AccordionItem,
-    [TabContainer.name]: TabContainer,
-    [TabContainerItem.name]: TabContainerItem
+    // [TabContainer.name]: TabContainer,
+    // [TabContainerItem.name]: TabContainerItem
   },
   mounted() {
-    Toast('还款方式')
+    // Toast('还款方式')
     //Indicator.open()
   }
 }

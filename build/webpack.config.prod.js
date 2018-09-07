@@ -3,7 +3,7 @@
 * @Date: 2018-08-21 14:27:44
 * @Email: chenchao3@sh.superjia.com
  * @Last Modified by: chenchao
- * @Last Modified time: 2018-08-31 18:21:15
+ * @Last Modified time: 2018-09-07 09:57:03
 */
 
 import entry from './config/entry'
@@ -24,7 +24,7 @@ export default {
   output: {
     path: `${process.cwd()}/dist`,
     publicPath: envConfig.publicPath,
-    filename: 'js/[name]_[hash:8].js',
+    filename: 'js/[name]-[hash:8].js',
     //chunkFilename: '[name][id].js'
   },
   resolve: {

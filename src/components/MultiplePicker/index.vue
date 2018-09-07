@@ -2,7 +2,8 @@
   <div class="m-multiple-picker bg-c-ff">
     <div class="picker-cell flex" v-for="(item, index) in list" :key="index">
       <span class="cell-title" v-if="item.title">{{item.title}}</span>
-      <input class="flex-1 text-right" v-if="['text', 'tel'].includes(item.type)" :type="item.type" :maxlength="item.maxlength"  :placeholder="item.placeholder" v-model="item.value"  :disabled="item.disabled">
+      <input class="flex-1 text-right" v-if="['text', 'tel'].includes(item.type) && !['mobile', 'bankCardNo'].includes(item.name)" :type="item.type" :maxlength="item.maxlength"  :placeholder="item.placeholder" v-model="item.value" :disabled="item.disabled" @input="formatInput($event, item)">
+      <input class="flex-1 text-right" v-if="['mobile', 'bankCardNo'].includes(item.name)" type="tel" :maxlength="item.maxlength"  :placeholder="item.placeholder" v-model="item.showValue" :disabled="item.disabled" @input="formatInput($event, item)">
       <span class="cell-choose flex-1 text-right" v-if="['datetime', 'date', 'choose'].includes(item.type)" @click="openPicker(item.name, item.value, item.disabled)">
         <span v-if="item.showValue">{{item.showValue}}</span>
         <span v-else class="no-value">请选择</span>
@@ -44,6 +45,15 @@ export default {
     }
   },
   methods: {
+    formatInput(e, item) { // 3 4 4格式电话号码
+      if (item.name == 'mobile') {
+        item.value = e.target.value.replace(/\D/g, '')
+        item.showValue = util.formatMobile(e.target.value)
+      } else if (item.name == 'bankCardNo') {
+        item.value = e.target.value.replace(/\D/g, '')
+        item.showValue = util.formatBankcard(e.target.value)
+      }
+    },
     chooseConfirm(value, name, type) { //slots选择
       this.list.forEach((item, index) => {
         if (item.name == name) {
@@ -93,7 +103,7 @@ export default {
       background-color: #fff;
     }
     .cell-title{
-      width: 4em;
+      width: 5em;
     }
     .no-value{
       color: #bdbdbd;

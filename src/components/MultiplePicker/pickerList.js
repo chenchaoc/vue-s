@@ -6,24 +6,53 @@ export default function () {
     maxlength: 20, //最大长度
     placeholder: '请输入姓名', //默认文案
     value: '', //上传的值
-    disabled: false, //是否可修改
+    disabled: false, //是否不可修改
     showIcon: false, //是否展示右箭头点击选择
     reg: /^[\u4E00-\u9FA5a-zA-Z_]{2,20}$/, //正则
-    regError: '请输入正确姓名', //不匹配正则的错误提示
+    regError: '姓名格式不正确', //不匹配正则的错误提示
     error: '请输入姓名', //value为空的错误提示
     isMust: true, //是否必填
   }, {
     name: 'mobile', //对应后端字段名
     title: '手机号', //标题
     type: 'tel', //类型
-    maxlength: 11, //最大长度
+    maxlength: 13, //最大长度
     placeholder: '请输入手机号码', //默认文案
     value: '', //上传的值
-    disabled: false, //是否可修改
+    showValue: '',
+    disabled: false, //是否不可修改
     showIcon: false, //是否展示右箭头点击选择
     reg: /^1[3456789]\d{9}$/, //正则
-    regError: '请输入正确手机号码', //不匹配正则的错误提示
+    regError: '手机号码格式不正确', //不匹配正则的错误提示
     error: '请输入手机号码', //错误提示
+    isMust: true, //是否必填
+  }, {
+    name: 'idCard', //对应后端字段名
+    title: '身份证号码', //标题
+    type: 'tel', //类型
+    maxlength: 18, //最大长度
+    placeholder: '请输入身份证号', //默认文案
+    value: '', //上传的值
+    showValue: '', //展示的值
+    disabled: false, //是否不可修改
+    showIcon: false, //是否展示右箭头点击选择
+    reg: /^[1-9]\d{5}(18|19|([23]\d))\d{2}((0[1-9])|(10|11|12))(([0-2][1-9])|10|20|30|31)\d{3}[0-9Xx]$/, //正则
+    regError: '身份证号码格式不正确', //不匹配正则的错误提示
+    error: '请输入手机号码', //错误提示
+    isMust: true, //是否必填
+  }, {
+    name: 'bankCardNo', //对应后端字段名
+    title: '银行卡号', //标题
+    type: 'tel', //类型
+    maxlength: 28, //最大长度
+    placeholder: '请输入银行卡号', //默认文案
+    value: '', //上传的值
+    showValue: '', //展示的值
+    disabled: false, //是否不可修改
+    showIcon: false, //是否展示右箭头点击选择
+    reg: '', //正则
+    regError: '银行卡号格式不正确', //不匹配正则的错误提示
+    error: '请输入银行卡号', //错误提示
     isMust: true, //是否必填
   }, {
     name: 'occupation', //对应后端字段名
@@ -33,7 +62,7 @@ export default function () {
     placeholder: '', //默认文案
     value: '', //上传后端的值
     showValue: '', //前端展示的value值
-    disabled: false, //是否可修改
+    disabled: false, //是否不可修改
     showIcon: true, //是否展示右箭头点击选择
     reg: '', //正则
     regError: '', //不匹配正则的错误提示
@@ -63,7 +92,7 @@ export default function () {
     placeholder: '', //默认文案
     value: '', //上传后端的值
     showValue: '', //前端展示的value值
-    disabled: false, //是否可修改
+    disabled: false, //是否不可修改
     showIcon: true, //是否展示右箭头点击选择
     reg: '', //正则
     regError: '', //不匹配正则的错误提示

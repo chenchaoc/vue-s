@@ -45,11 +45,11 @@ export default {
     }
   },
   methods: {
-    formatInput(e, item) { // 3 4 4格式电话号码
-      if (item.name == 'mobile') {
+    formatInput(e, item) {
+      if (item.name == 'mobile') { // 3 4 4格式电话号码
         item.value = e.target.value.replace(/\D/g, '')
         item.showValue = util.formatMobile(e.target.value)
-      } else if (item.name == 'bankCardNo') {
+      } else if (item.name == 'bankCardNo') { //4 4 4格式化银行卡号
         item.value = e.target.value.replace(/\D/g, '')
         item.showValue = util.formatBankcard(e.target.value)
       }

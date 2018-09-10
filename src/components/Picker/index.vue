@@ -92,10 +92,20 @@ export default {
 }
 </script>
 
-<style>
+<style lang="scss">
   .picker-toolbar-box{
+    position: relative;
     color: #26a2ff;
     line-height: 40px;
-    border-bottom: 1px solid #eaeaea;
+    &::before{
+      content: '';
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      width: 100%;
+      height: 1px;
+      transform: scaleY(0.5);
+      background-color: #eaeaea;
+    }
   }
 </style>

@@ -44,7 +44,7 @@ export default function () {
     name: 'bankCardNo', //对应后端字段名
     title: '银行卡号', //标题
     type: 'tel', //类型
-    maxlength: 28, //最大长度
+    maxlength: 23, //最大长度
     placeholder: '请输入银行卡号', //默认文案
     value: '', //上传的值
     showValue: '', //展示的值
@@ -68,7 +68,7 @@ export default function () {
     regError: '', //不匹配正则的错误提示
     error: '请选择职业', //错误提示
     isMust: true, //是否必填
-    slots: [{
+    slots: [{ //可选择列表
       values: [{
         text: '工作1',
         mode: 1
@@ -98,7 +98,7 @@ export default function () {
     regError: '', //不匹配正则的错误提示
     error: '请选择性别', //错误提示
     isMust: true, //是否必填
-    slots: [{
+    slots: [{ //可选择列表
       values: [{
         text: '男',
         mode: 1
@@ -125,7 +125,7 @@ export default function () {
     regError: '', //不匹配正则的错误提示
     error: '请选择', //错误提示
     isMust: true, //是否必填
-    slots: [{
+    slots: [{ //可选择列表
       values: [{
         text: '年龄1',
         mode: 1

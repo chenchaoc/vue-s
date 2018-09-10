@@ -4,7 +4,7 @@
 * @Email: chenchao3@sh.superjia.com
 * @Last Modified by: chenchao
  * @Last Modified by: chenchao
- * @Last Modified time: 2018-09-05 17:51:02
+ * @Last Modified time: 2018-09-10 10:54:11
 */
 
 import JSEncrypt from 'jsencrypt' //rsa非对称加密依赖包
@@ -451,7 +451,7 @@ export function fullTimeStr(v) {
   return `${year}年${month}月${date}日${hour}时${minute}分${second}秒`
 }
 /**
- * [fullDate 获取完整时间 返回例子：2014年06月27日13时57分24秒]
+ * [fullDate 获取完整时间 返回例子：2014-06-27日]
  * @param  {[number | string]} v [description]
  * @return {[string]}   [description]
  */

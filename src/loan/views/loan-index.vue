@@ -19,10 +19,12 @@ export default {
   },
   mounted() {
     //this.ajax()
+    console.log(util.os)
+    console.log(util.browser)
   },
   methods: {
     ajax() {
-      API('homeList', { a: util.jsEncrypt('abc') }, { headers: { OS: 'WECHAT' }, showLoading: true }).then((res) => {
+      API('homeList', { a: util.jsEncrypt('abc') }, { headers: { OS: 'WECHAT' }, showLoading: false }).then((res) => {
         Toast('请求成功')
         console.log(res)
       }).catch((e) => {

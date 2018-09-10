@@ -1,6 +1,6 @@
 <template>
   <div class="demo-header">
-    <m-header title="这是页面title">
+    <m-header title="demo-header">
       <div slot="header-right">header右边</div>
     </m-header>
     <btab-demo-common></btab-demo-common>

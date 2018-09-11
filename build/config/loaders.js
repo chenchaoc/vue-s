@@ -3,7 +3,7 @@
 * @Date: 2018-08-21 17:08:12
 * @Email: chenchao3@sh.superjia.com
  * @Last Modified by: chenchao
- * @Last Modified time: 2018-09-10 10:31:39
+ * @Last Modified time: 2018-09-11 11:48:15
 */
 import MiniCssExtractPlugin from 'mini-css-extract-plugin' //从js分离出css,代替ExtractTextPlugin,webpack4官方推荐,支持非入口文件的css异步加载
 import eslintFriendlyFormatter from 'eslint-friendly-formatter'
@@ -67,6 +67,11 @@ export default [
         options: postcssPlugins()
       }, {
         loader: 'sass-loader'
+      }, {
+        loader: 'sass-resources-loader', //全局sass变量
+        options: {
+          resources: `${process.cwd()}/src/global/style/color.scss`
+        }
       }
     ]
   }, {

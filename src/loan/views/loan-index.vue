@@ -42,5 +42,6 @@ export default {
   .wyb-loan{
     padding-bottom: 48px;
     min-height: 100%;
+    background-color: $cl-f7;
   }
 </style>

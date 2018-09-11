@@ -3,23 +3,16 @@
 * @Date: 2018-08-21 14:45:56
 * @Email: chenchao3@sh.superjia.com
  * @Last Modified by: chenchao
- * @Last Modified time: 2018-09-11 16:05:27
+ * @Last Modified time: 2018-09-11 16:56:25
 */
 
 import routes from './routes'
 import Vue from 'vue'
 import VueRouter from 'vue-router'
 import store from '../store/store'
-import demo from '../components/router'
+
 Vue.use(VueRouter)
 
-if (process.env.NODE_ENV == 'development') {
-  routes.push(...demo)
-}
-routes.push({
-  path: '*',
-  component: () => import(/* webpackChunkName: "wyb-404" */ '../static/404/index.vue')
-})
 const router = new VueRouter({
   mode: 'history',
   routes,

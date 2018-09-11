@@ -3,7 +3,7 @@
  * @Date:  2018-08-28 14:39:19
  * @email:  chenchao3.sh@superjia.com
  * @Last Modified by: chenchao
- * @Last Modified time: 2018-09-03 15:45:00
+ * @Last Modified time: 2018-09-11 17:45:07
  */
 
 import store from './store/store'
@@ -11,6 +11,7 @@ import { Toast } from 'mint-ui'
 
 const apiMap = {
   homeList: 'homeList.action',
+  signatureUrl: 'signature.action'
 }
 
 //example  API('homeList', { a: 1 }, { headers: { OS: 'WECHAT' }, showLoading: false, hideToast: true }).then(() => {}).catch(() => {})

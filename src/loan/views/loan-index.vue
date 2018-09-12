@@ -21,6 +21,8 @@ export default {
     //this.ajax()
     console.log(util.os)
     console.log(util.browser)
+    console.log(util)
+    //console.log(wechat)
   },
   methods: {
     ajax() {

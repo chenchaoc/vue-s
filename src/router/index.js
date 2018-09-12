@@ -3,11 +3,10 @@
 * @Date: 2018-08-21 14:45:56
 * @Email: chenchao3@sh.superjia.com
  * @Last Modified by: chenchao
- * @Last Modified time: 2018-09-11 16:56:25
+ * @Last Modified time: 2018-09-12 13:13:04
 */
 
 import routes from './routes'
-import Vue from 'vue'
 import VueRouter from 'vue-router'
 import store from '../store/store'
 

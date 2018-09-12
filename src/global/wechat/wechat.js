@@ -3,7 +3,7 @@
 * @Date: 2018-08-21 15:29:49
 * @Email: chenchao3@sh.superjia.com
  * @Last Modified by: chenchao
- * @Last Modified time: 2018-09-11 18:43:30
+ * @Last Modified time: 2018-09-12 13:33:51
 */
 //https://mp.weixin.qq.com/wiki?t=resource/res_main&id=mp1421141115
 import API from '../../api'
@@ -45,18 +45,23 @@ const allJsApiList = [ //js接口列表
   'chooseCard', //拉取适用卡券列表并获取用户选择信息
   'openCard', //查看微信卡券
 ]
-function filterJsApiList() {
+function filterJsApiList(l = [0, 1]) {
+  let list = []
+  l.map((item, index) => {
+    list.push(allJsApiList[item])
+  })
+  return list
 }
 /**
  * [initSignature 所有需要使用JS-SDK的页面必须先注入配置信息，否则将无法调用]
  * @param  {Array}  jsApiList [description]
  * @return {[Promise]}           [description]
  */
-function initSignature(jsApiList = ['onMenuShareTimeline', 'onMenuShareAppMessage']) {
-  return API('signatureUrl').then((res) => {
+function initSignature(jsApiList = filterJsApiList()) {
+  return API('signatureUrl', { url: location.href.split('#')[0] }).then((res) => {
     const { appId, timestamp, nonceStr, signature } = res.data
     wx.config({
-      debug: false,
+      debug: true,
       appId,
       timestamp,
       nonceStr,
@@ -71,9 +76,9 @@ function initSignature(jsApiList = ['onMenuShareTimeline', 'onMenuShareAppMessag
  * @param  {Object} option [配置信息]
  * @return {[type]}        [description]
  */
-export function share(option = {}) {
+export function share(option = {}, jsApiList = filterJsApiList()) {
   return new Promise((resolve, reject) => {
-    initSignature().then(() => {
+    initSignature(jsApiList).then(() => {
       wx.ready(() => {
         const config = Object.assign({}, {
           type: 'link', //不填默认为link 如果是分享到朋友圈(可为music、video、link)
@@ -83,6 +88,7 @@ export function share(option = {}) {
           dataUrl: '', //默认为空,朋友圈分享(如果type是music或video,则要提供数据链接)
           desc: '无忧宝，借款无忧', //分享描述
         }, option)
+        //console.warn('wechat.share', config)
         wx.updateTimelineShareData({ //朋友圈
           type: config.type,
           title: config.title,

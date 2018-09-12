@@ -3,7 +3,7 @@
 * @Date: 2018-08-21 16:07:48
 * @Email: chenchao3@sh.superjia.com
  * @Last Modified by: chenchao
- * @Last Modified time: 2018-09-11 18:28:07
+ * @Last Modified time: 2018-09-12 13:03:52
 */
 
 import webpack from 'webpack'
@@ -37,6 +37,7 @@ export default [
   new webpack.ProvidePlugin({  //全局载入的可以调用的组件名称
     Vue: 'vue',
     VueRouter: 'vue-router',
+    Vuex: 'vuex',
     util: 'util',
     common: 'common',
     wechat: 'wechat'

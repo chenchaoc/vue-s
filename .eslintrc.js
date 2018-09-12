@@ -3,7 +3,7 @@
 * @Date: 2018-08-21 20:56:24
 * @Email: chenchao3@sh.superjia.com
  * @Last Modified by: chenchao
- * @Last Modified time: 2018-09-12 12:23:43
+ * @Last Modified time: 2018-09-12 13:05:28
 */
 module.exports = {
   "root": true,
@@ -29,13 +29,13 @@ module.exports = {
 
   "globals": Object.assign({
     "pageConfig": true,
-    "__DEV__": true,
-    "__PROD__": true,
+    "window": true
   }, {
-    'Vue': 'vue',
-    'VueRouter': 'vue-router',
-    'util': 'util',
-    'common': 'common',
+    "Vue": "vue",
+    "VueRouter": "vue-router",
+    "Vuex": "vuex",
+    "util": "util",
+    "common": "common",
     "wechat": "wechat"
   }),
 

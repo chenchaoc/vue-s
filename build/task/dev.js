@@ -3,23 +3,24 @@
 * @Date: 2018-08-21 15:41:54
 * @Email: chenchao3@sh.superjia.com
  * @Last Modified by: chenchao
- * @Last Modified time: 2018-08-30 21:18:29
+ * @Last Modified time: 2018-09-14 11:37:12
 */
 
-import express from 'express'; //nodejs 框架
-import ip from 'ip'; //ip地址
-import chalk from 'chalk'; //变色
-import webpack from 'webpack'; //webpack
-import webpackDevMiddleware from 'webpack-dev-middleware';  //nodejs服务中间件
-import webpackHotMiddleware from 'webpack-hot-middleware'; //热刷新
-import connectHistoryApiFallback from 'connect-history-api-fallback'; //热刷新不会丢失？
-import httpProxyMiddleware from 'http-proxy-middleware'; //http代理中间件
+import express from 'express' //nodejs 框架
+import ip from 'ip' //ip地址
+import open from 'open' //打开浏览器
+import chalk from 'chalk' //变色
+import webpack from 'webpack' //webpack
+import webpackDevMiddleware from 'webpack-dev-middleware' //nodejs服务中间件
+import webpackHotMiddleware from 'webpack-hot-middleware' //热刷新
+import connectHistoryApiFallback from 'connect-history-api-fallback' //热刷新不会丢失？
+import httpProxyMiddleware from 'http-proxy-middleware' //http代理中间件
 
-import proxyConfig from '../config/proxyConfig';
-import webpackConfig from '../webpack.config.dev';
+import proxyConfig from '../config/proxyConfig'
+import webpackConfig from '../webpack.config.dev'
 
-const hotclient = ['webpack-hot-middleware/client?noInfo=true&reload=true'];
-const entry = webpackConfig.entry;
+const hotclient = ['webpack-hot-middleware/client?noInfo=true&reload=true']
+const entry = webpackConfig.entry
 Object.keys(entry).forEach((name) => {
   const value = entry[name]
   if (Array.isArray(value)) {
@@ -72,4 +73,5 @@ devServer.listen(proxyConfig.devServerPort, function () {
   process.stdout.clearLine()
   process.stdout.cursorTo(0)
   console.log(`dev-server at ${chalk.magenta.underline(`http://${ip.address()}:${this.address().port}/`)}`)
+  open(`http://${ip.address()}:${this.address().port}/`)
 })

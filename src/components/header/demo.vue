@@ -1,6 +1,6 @@
 <template>
   <div class="demo-header">
-    <m-header title="demo-header">
+    <m-header :title="$route.name.replace('wyb-', '')">
       <div slot="header-right">header右边</div>
     </m-header>
     <btab-demo-common></btab-demo-common>

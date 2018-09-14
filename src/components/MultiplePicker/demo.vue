@@ -1,6 +1,6 @@
 <template>
   <div class="demo-multiple-picker">
-    <m-header title="demo-multiple-picker"></m-header>
+    <m-header :title="$route.name.replace('wyb-', '')"></m-header>
     <div class="multiple-picker-wrapper">
       <m-multiple-picker :list="list"></m-multiple-picker>
     </div>

@@ -1,6 +1,6 @@
 <template>
   <div class="demo-picker">
-    <m-header title="demo-picker"></m-header>
+    <m-header :title="$route.name.replace('wyb-', '')"></m-header>
     <div class="picker-wrapper">
       <mt-cell title="打开选择器" @click.native="showPicker" is-link></mt-cell>
       <mt-cell title="当前选中" :value="currentValue && currentValue.text"></mt-cell>

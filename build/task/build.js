@@ -3,14 +3,14 @@
 * @Date: 2018-08-21 15:42:02
 * @Email: chenchao3@sh.superjia.com
  * @Last Modified by: chenchao
- * @Last Modified time: 2018-08-30 21:18:15
+ * @Last Modified time: 2018-09-14 11:39:36
 */
 
-import webpack from 'webpack';
-import webpackConfig from '../webpack.config.prod';
+import webpack from 'webpack'
+import webpackConfig from '../webpack.config.prod'
 //import deploy from './deploy';
 //import upload from './upload';
-import { envName } from '../config/env.js';
+import { envName } from '../config/env.js'
 
 webpack(webpackConfig, function(error,stats){
   if(error){

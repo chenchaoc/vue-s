@@ -1,8 +1,8 @@
 <template>
-  <transition name="ml-view">
-    <div class="ml-box" v-show="value">
-      <div class="ml-img-box" ref="mlIImg">
-        <img :style="{width:`${imgWidth*zoom}px`,'margin-top':`${mTop}px`,'margin-left':`${mLeft}px`}" :src="url" class="ml-img" :class="{'ml-img-detail':!isTouch&&!this.animating}" />
+  <transition name="img-view">
+    <div class="iv-box" v-show="value">
+      <div class="iv-img-box">
+        <img :style="{width:`${imgWidth*zoom}px`,'margin-top':`${mTop}px`,'margin-left':`${mLeft}px`}" :src="url" class="iv-img" :class="{'iv-img-detail':!isTouch&&!this.animating}" />
       </div>
     </div>
   </transition>
@@ -288,10 +288,10 @@
 </script>
 
 <style lang="scss">
-  .ml-view-enter,.ml-view-leave-active{
+  .img-view-enter,.img-view-leave-active{
     opacity:0;    
   }
-  .ml-box{
+  .iv-box{
     position:fixed;
     top:0;
     left:0;
@@ -300,12 +300,12 @@
     z-index: 1001;
     background-color:rgba(0,0,0,.7);
     transition: all .3s ease-out;
-    .ml-img-box{
+    .iv-img-box{
       position: relative;
       width:100%;
       height:100%;
       overflow: hidden;
-      .ml-img{
+      .iv-img{
         display: block;
         position: relative;
         top: 50%;
@@ -313,7 +313,7 @@
         transform: translate3d(-50%,-50%,0);
         z-index: 1002;
         background-color: #fff;
-        &.ml-img-detail{
+        &.iv-img-detail{
           transition: all .3s cubic-bezier(.645,.045,.355,1);
         }
       }

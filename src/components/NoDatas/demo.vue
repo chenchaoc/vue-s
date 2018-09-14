@@ -1,6 +1,6 @@
 <template>
   <div class="demo-nodatas">
-    <m-header title="demo-nodatas"></m-header>
+    <m-header :title="$route.name.replace('wyb-', '')"></m-header>
     <m-no-datas></m-no-datas>
     <btab-demo-common></btab-demo-common>
   </div>

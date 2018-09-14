@@ -1,6 +1,6 @@
 <template>
   <div class="demo-img-view">
-    <m-header title="demo-img-view"></m-header>
+    <m-header :title="$route.name.replace('wyb-', '')"></m-header>
     <div class="demo-img-view-wrapper">
       <img :src="myycy" @click="showView(myycy)">
       <m-img-view v-model="imgViewModel" :url="imgViewUrl" :scale="3"></m-img-view>

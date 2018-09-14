@@ -3,7 +3,7 @@
  * @Date:  2018-08-22 13:11:37 
  * @email:  chenchao3.sh@superjia.com 
  * @Last Modified by: chenchao
- * @Last Modified time: 2018-09-07 09:57:13
+ * @Last Modified time: 2018-09-14 11:52:43
  */
 
 import MiniCssExtractPlugin from 'mini-css-extract-plugin'
@@ -50,6 +50,7 @@ export default [
     filename: 'wyb.zip'
   })
 ]
+
 
 
 

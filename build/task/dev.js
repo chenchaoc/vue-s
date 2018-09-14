@@ -3,7 +3,7 @@
 * @Date: 2018-08-21 15:41:54
 * @Email: chenchao3@sh.superjia.com
  * @Last Modified by: chenchao
- * @Last Modified time: 2018-09-14 11:37:12
+ * @Last Modified time: 2018-09-14 14:11:39
 */
 
 import express from 'express' //nodejs 框架
@@ -13,7 +13,7 @@ import chalk from 'chalk' //变色
 import webpack from 'webpack' //webpack
 import webpackDevMiddleware from 'webpack-dev-middleware' //nodejs服务中间件
 import webpackHotMiddleware from 'webpack-hot-middleware' //热刷新
-import connectHistoryApiFallback from 'connect-history-api-fallback' //热刷新不会丢失？
+import connectHistoryApiFallback from 'connect-history-api-fallback' //刷新页面不会404
 import httpProxyMiddleware from 'http-proxy-middleware' //http代理中间件
 
 import proxyConfig from '../config/proxyConfig'
@@ -59,7 +59,7 @@ devServer.use(hotMiddleware)
 
 devServer.use(httpProxyMiddleware(['/api', '/img'], {
   logLevel: 'silent',
-  target: `http://${ip.address()}:${proxyConfig.bkdServerPort}`,
+  target: proxyConfig.proxyTarget,
   changeOrigin: true
 }))
 
@@ -72,6 +72,6 @@ devServer.use(httpProxyMiddleware('**/*.action', {
 devServer.listen(proxyConfig.devServerPort, function () {
   process.stdout.clearLine()
   process.stdout.cursorTo(0)
-  console.log(`dev-server at ${chalk.magenta.underline(`http://${ip.address()}:${this.address().port}/`)}`)
-  open(`http://${ip.address()}:${this.address().port}/`)
+  console.log(`dev-server at ${chalk.magenta.underline(`http://${ip.address()}:${proxyConfig.devServerPort}/`)}`)
+  open(`http://${ip.address()}:${proxyConfig.devServerPort}/`)
 })

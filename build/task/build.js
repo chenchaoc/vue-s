@@ -3,12 +3,12 @@
 * @Date: 2018-08-21 15:42:02
 * @Email: chenchao3@sh.superjia.com
  * @Last Modified by: chenchao
- * @Last Modified time: 2018-09-14 11:52:11
+ * @Last Modified time: 2018-09-14 14:54:29
 */
 
 import webpack from 'webpack'
 import webpackConfig from '../webpack.config.prod'
-//import deploy from './deploy';
+import deploy from './deploy'
 //import upload from './upload';
 import { envName } from '../config/env.js'
 
@@ -34,7 +34,7 @@ webpack(webpackConfig, function(error,stats){
   }
   //集成发版，上传至ftp服务器运维发布
   if( envName == 'prod'){
-    //deploy();
+    deploy()
   } else {
     //upload() 需配置好上传的ip和后端的.do处理文件再运行
   }

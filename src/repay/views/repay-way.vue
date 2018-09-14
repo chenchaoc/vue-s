@@ -32,7 +32,7 @@ export default {
   },
   mounted() {
     // Toast('还款方式')
-    //Indicator.open()
+    // Indicator.open()
   }
 }
 </script>

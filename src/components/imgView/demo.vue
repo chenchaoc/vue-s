@@ -11,7 +11,7 @@
 <script>
 import Header from '../Header'
 import ImgView from './index'
-import myycy from '@images/myycy.jpg'
+import myycy from '../../loan/images/myycy.jpg'
 export default {
   components: {
     [Header.name]: Header,

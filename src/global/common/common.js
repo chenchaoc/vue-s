@@ -3,7 +3,7 @@
 * @Date: 2018-08-21 15:18:09
 * @Email: chenchao3@sh.superjia.com
  * @Last Modified by: chenchao
- * @Last Modified time: 2018-09-03 10:06:17
+ * @Last Modified time: 2018-09-14 17:13:54
 */
 import axios from 'axios'
 axios.interceptors.request.use(config => {

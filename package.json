@@ -7,7 +7,8 @@
     "dev": "babel-node ./build/task/dev.js --dev",
     "test": "babel-node ./build/task/build.js --test",
     "beta": "babel-node ./build/task/build.js --beta",
-    "prod": "babel-node ./build/task/build.js --prod"
+    "prod": "babel-node ./build/task/build.js --prod",
+    "watch": "babel-node ./build/task/watch.js --beta"
   },
   "repository": {
     "type": "git",
@@ -87,7 +88,7 @@
     "readline": "^1.3.0",
     "sass-loader": "^7.1.0",
     "sass-resources-loader": "^1.3.3",
-    "size-plugin": "^1.0.1",
+    "uglifyjs-webpack-plugin": "^2.0.0",
     "url-loader": "^1.1.1",
     "vue-loader": "^15.4.0",
     "vue-style-loader": "^4.1.2",

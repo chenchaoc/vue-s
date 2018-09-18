@@ -3,7 +3,7 @@
 * @Date: 2018-08-21 15:29:49
 * @Email: chenchao3@sh.superjia.com
  * @Last Modified by: chenchao
- * @Last Modified time: 2018-09-12 13:33:51
+ * @Last Modified time: 2018-09-18 09:52:30
 */
 //https://mp.weixin.qq.com/wiki?t=resource/res_main&id=mp1421141115
 import API from '../../api'
@@ -47,9 +47,11 @@ const allJsApiList = [ //js接口列表
 ]
 function filterJsApiList(l = [0, 1]) {
   let list = []
-  l.map((item, index) => {
-    list.push(allJsApiList[item])
-  })
+  if (l.length > 0) {
+    l.map((item, index) => {
+      list.push(allJsApiList[item])
+    })
+  }
   return list
 }
 /**

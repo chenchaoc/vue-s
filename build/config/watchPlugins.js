@@ -1,19 +1,16 @@
 /*
- * @Author:  chenchao 
- * @Date:  2018-08-22 13:11:37 
- * @email:  chenchao3.sh@superjia.com 
+ * @Author:  chenchao
+* @Date:  2018-09-18 10:26:17
+* @email:  chenchao3.sh@superjia.com
  * @Last Modified by: chenchao
- * @Last Modified time: 2018-09-18 10:26:30
+ * @Last Modified time: 2018-09-18 10:33:18
  */
 
 import MiniCssExtractPlugin from 'mini-css-extract-plugin'
-import OptimizeCssAssetsPlugin from 'optimize-css-assets-webpack-plugin'
 import CleanWebpackPlugin from 'clean-webpack-plugin'
-import ZipWebpackPlugin from 'zip-webpack-plugin'
+import OptimizeCssAssetsPlugin from 'optimize-css-assets-webpack-plugin'
 import ImageminPlugin from 'imagemin-webpack-plugin'
-import ManifestPlugin from 'webpack-plugin-manifest'
 
-//生产插件
 export default [
   new MiniCssExtractPlugin({
     filename: 'css/[name]-[contenthash:8].css'
@@ -23,11 +20,7 @@ export default [
     disable: false,
     pngquant: {
       quality: '90'
-    }            
-  }),  
-  new ManifestPlugin({ //文件路径映射
-    fileName: 'manifest.json',
-    basePath: `${process.cwd()}/dist/`
+    }
   }),
   new OptimizeCssAssetsPlugin({  //css压缩去除注释
     cssProcessor: require('cssnano'),
@@ -45,19 +38,4 @@ export default [
       allowExternal: false  //允许是否在webpack跟外清除文件夹，默认false 不允许
     }
   ),
-  new ZipWebpackPlugin({
-    path: '../uploadZip',  //相对于根目录
-    filename: 'wyb.zip'
-  })
 ]
-
-
-
-
-
-
-
-
-
-
-

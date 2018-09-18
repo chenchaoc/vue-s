@@ -25,6 +25,7 @@ export default {
     // }).catch((e) => {
     //   Toast(JSON.stringify(e))
     // })
+    // console.log(123)
   },
   methods: {
     ajax() {

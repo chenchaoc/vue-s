@@ -21,7 +21,6 @@ export default {
 </script>
 
 <style lang="scss">
-  @import './global/style/color';
   .app {
     height: 100%;
   }

@@ -3,7 +3,7 @@
 * @Date: 2018-08-21 14:45:56
 * @Email: chenchao3@sh.superjia.com
  * @Last Modified by: chenchao
- * @Last Modified time: 2018-09-12 13:13:04
+ * @Last Modified time: 2018-09-18 17:20:15
 */
 
 import routes from './routes'
@@ -15,7 +15,7 @@ Vue.use(VueRouter)
 const router = new VueRouter({
   mode: 'history',
   routes,
-  //base: '/vp/', //基路径
+  // base: '/vp/', //基路径
   //模拟滚动行为,页面之间切换回到原位置
   scrollBehavior (to, from, savedPosition) {
     if (savedPosition) {

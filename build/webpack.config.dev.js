@@ -3,7 +3,7 @@
 * @Date: 2018-08-21 14:27:30
 * @Email: chenchao3@sh.superjia.com
  * @Last Modified by: chenchao
- * @Last Modified time: 2018-08-31 18:21:02
+ * @Last Modified time: 2018-09-18 10:06:00
 */
 
 import loaders from './config/loaders'
@@ -32,5 +32,5 @@ export default {
   module: {
     rules: loaders
   },
-  plugins: [...basePlugins,...devPlugins]
+  plugins: [...basePlugins, ...devPlugins]
 }

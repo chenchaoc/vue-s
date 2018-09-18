@@ -3,7 +3,7 @@
 * @Date:  2018-09-14 14:42:45
 * @email:  chenchao3.sh@superjia.com
  * @Last Modified by: chenchao
- * @Last Modified time: 2018-09-14 14:53:54
+ * @Last Modified time: 2018-09-17 17:08:51
  */
 
 import promptly from 'promptly' //https://www.npmjs.com/package/promptly  命令行提示工具
@@ -68,11 +68,11 @@ function uploadFtp() {
 }
 
 export default async function deploy() {
-  console.log(chalk.cyan('\n--------- 部署开始 -------'))
+  console.log(chalk.cyan('\n--------- 上传FTP开始 -------'))
   await uploadFtp().then((result) => {
 
   }).catch(error => {
     console.log('fail',error)
   })
-  console.log(chalk.cyan('\n--------- 部署结束 -------'))
+  console.log(chalk.cyan('\n--------- 上传FTP结束 -------'))
 }

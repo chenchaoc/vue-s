@@ -3,11 +3,16 @@
 * @Date: 2018-08-21 16:05:59
 * @Email: chenchao3@sh.superjia.com
  * @Last Modified by: chenchao
- * @Last Modified time: 2018-09-14 11:52:43
+ * @Last Modified time: 2018-09-18 16:51:21
 */
 //提取重复引用文件 
 //runtimeChunk，将入口提取出来，这样入口文件可以很快加载，并且当哪里有改动的时候，只有改动的地方和这个文件有变化
+//import UglifyJsPlugin from 'uglifyjs-webpack-plugin'
+
 export default {
+  runtimeChunk: {
+    name: 'manifest'
+  },
   splitChunks: {
     //automaticNameDelimiter: '-',
     cacheGroups: {

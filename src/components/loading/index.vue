@@ -56,20 +56,20 @@ export default {
       }       
       $line-rotation: 0deg;
       $animation-delay: 0s;
-      @for $i from 1 through 12{
+      @for $i from 1 through 12 {
         &:nth-child(#{$i}){
           transform: rotate($line-rotation); 
           $line-rotation: $line-rotation + 30;
           &::before{
             animation-delay: $animation-delay;
-            $animation-delay: $animation-delay + 0.1;
+            $animation-delay: $animation-delay + 0.083;
           }                   
         }
       }
     }
   }
-  @keyframes circleFadeDelay {
-    0%, 100% { opacity: 0.4; }
-    50% { opacity: 1; } 
-  }    
+  @keyframes circleFadeDelay{
+    0%, 100% { opacity: 0.3; }
+    50% { opacity: 1; }
+  }
 </style>

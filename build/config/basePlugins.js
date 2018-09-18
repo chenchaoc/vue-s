@@ -3,7 +3,7 @@
 * @Date: 2018-08-21 16:07:48
 * @Email: chenchao3@sh.superjia.com
  * @Last Modified by: chenchao
- * @Last Modified time: 2018-09-14 11:52:22
+ * @Last Modified time: 2018-09-18 14:31:39
 */
 
 import webpack from 'webpack'
@@ -13,11 +13,9 @@ import HtmlWebpackPlugin from 'html-webpack-plugin'
 import WebpackNotifierPlugin from 'webpack-notifier'
 import { envName } from './env'
 import VueLoaderPlugin from 'vue-loader/lib/plugin'
-import SizePlugin from 'size-plugin'
 //公共插件
 export default [
   new VueLoaderPlugin(),
-  //new SizePlugin(), //查看包文件大小
   new ProgressBarPlugin({
     format: `${chalk.bold('[:bar]')} ${chalk.cyan.bold(':percent (:elapseds)')} :msg`,
     clear: true,
@@ -55,5 +53,5 @@ export default [
     failureSound: 'Glass',
     suppressSuccess: true
   }),
-  new webpack.HashedModuleIdsPlugin()
+  new webpack.HashedModuleIdsPlugin(), //chunkhash长效缓存
 ]

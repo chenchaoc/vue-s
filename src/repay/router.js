@@ -3,7 +3,7 @@
 * @Date: 2018-08-21 20:33:10
 * @Email: chenchao3@sh.superjia.com
  * @Last Modified by: chenchao
- * @Last Modified time: 2018-08-30 14:04:03
+ * @Last Modified time: 2018-09-19 10:40:06
 */
 export default [{
   path: '/repay/index',
@@ -18,5 +18,12 @@ export default [{
   component: () => import(/* webpackChunkName: "wyb-repay-way" */ './views/repay-way'),
   meta: {
     title: '还款'
+  }
+}, {
+  path: '/repay/hua',
+  name: 'wyb-repay-hua',
+  component: () => import(/* webpackChunkName: "wyb-repay-hua" */ './views/repay-hua'),
+  meta: {
+    title: '落花框'
   }
 }]

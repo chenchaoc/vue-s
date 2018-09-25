@@ -15,7 +15,6 @@ import { envName } from './env'
 import VueLoaderPlugin from 'vue-loader/lib/plugin'
 //公共插件
 export default [
-  new VueLoaderPlugin(),
   new ProgressBarPlugin({
     format: `${chalk.bold('[:bar]')} ${chalk.cyan.bold(':percent (:elapseds)')} :msg`,
     clear: true,
@@ -25,6 +24,7 @@ export default [
       process.stdout.write(`=====${chalk.green.bold(`[ built in ${buildTime} ]`)}=====`)
     }
   }),
+  new VueLoaderPlugin(),
   //webpack4中process.env.NODE_ENV默认为production
   new webpack.DefinePlugin({
     'process.env': {

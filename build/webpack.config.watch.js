@@ -3,9 +3,9 @@
 * @Date:  2018-09-18 10:24:12
 * @email:  chenchao3.sh@superjia.com
  * @Last Modified by: chenchao
- * @Last Modified time: 2018-09-18 14:36:00
+ * @Last Modified time: 2018-09-20 14:58:29
  */
-//"watch": "babel-node ./build/task/watch.js --beta" beta环境的本地代码代理调试
+//"watch": "babel-node ./build/task/watch.js --beta" beta环境生成本地代码nginx代理调试app内页面
 
 import loaders from './config/loaders'
 import alias from './config/alias'

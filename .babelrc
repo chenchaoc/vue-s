@@ -9,7 +9,8 @@
             "iOS >= 7",
             "Android >= 4"
           ]
-        }
+        },
+        "useBuiltIns": "usage"
       }
     ]
   ],

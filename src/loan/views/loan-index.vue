@@ -26,6 +26,9 @@ export default {
     //   Toast(JSON.stringify(e))
     // })
     // console.log(123)
+    // [1, 2, 3].includes(1)
+    // console.log(Array.from('abc'))
+    // console.log([1, 2, 3].findIndex((v) => v == 0))
   },
   methods: {
     ajax() {

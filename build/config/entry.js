@@ -3,18 +3,18 @@
 * @Date: 2018-08-21 15:24:53
 * @Email: chenchao3@sh.superjia.com
  * @Last Modified by: chenchao
- * @Last Modified time: 2018-09-11 18:34:54
+ * @Last Modified time: 2018-09-25 17:33:29
 */
 //入口文件
 export default {
-  'wyb-vendor': [
+  'vendor': [
     'vue',
     'vuex',
     'vue-router',
     'axios',
-    'fastclick'
+    'fastclick',
   ],
-  'wyb-common': [
+  'common': [
     './global/common/common.js',
     './global/util/util.js',
     './global/wechat/wechat.js',

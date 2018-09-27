@@ -3,7 +3,7 @@
 * @Date: 2018-08-21 16:07:48
 * @Email: chenchao3@sh.superjia.com
  * @Last Modified by: chenchao
- * @Last Modified time: 2018-09-18 14:31:39
+ * @Last Modified time: 2018-09-25 18:29:36
 */
 
 import webpack from 'webpack'
@@ -32,7 +32,7 @@ export default [
       'GLOBAL_ENV': JSON.stringify(envName)
     }
   }),
-  new webpack.ProvidePlugin({  //全局载入的可以调用的组件名称
+  new webpack.ProvidePlugin({  //全局变量
     Vue: 'vue',
     VueRouter: 'vue-router',
     Vuex: 'vuex',

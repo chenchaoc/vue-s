@@ -2,7 +2,7 @@
   <div class="wyb-loan">
     <mt-cell title="申请借款" @click.native="go('wyb-loan-request')" is-link></mt-cell>
     <mt-cell title="发一个ajax看看" @click.native="ajax" is-link></mt-cell>
-    <mt-cell title="组件列表" @click.native="go('wyb-demo')" is-link></mt-cell>
+    <mt-cell title="组件列表" @click.native="go('wyb-demo')" is-link v-if="show"></mt-cell>
     <!-- <input type="file" name="file" accept="image/png,image/gif,image/jpeg" @change="update"> -->
     <common-tab></common-tab>
   </div>
@@ -18,6 +18,11 @@ export default {
     [CommonTab.name]: CommonTab,
     [Cell.name]: Cell
   },
+  data() {
+    return {
+      show: process.env.GLOBAL_ENV == 'dev'
+    }
+  },
   mounted() {
     //this.ajax()
     // wechat.share().then(() => {
@@ -32,7 +37,7 @@ export default {
   },
   methods: {
     ajax() {
-      API('homeList', { a: util.jsEncrypt(1) }).then((res) => {
+      API('homeList', { a: util.jsEncrypt(1), b: { c: 1 } }).then((res) => {
         console.log(res)
       })
     },

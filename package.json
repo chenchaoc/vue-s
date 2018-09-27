@@ -8,7 +8,8 @@
     "test": "babel-node ./build/task/build.js --test",
     "beta": "babel-node ./build/task/build.js --beta",
     "prod": "babel-node ./build/task/build.js --prod",
-    "watch": "babel-node ./build/task/watch.js --beta"
+    "watch-test": "babel-node ./build/task/watch.js --test",
+    "watch-beta": "babel-node ./build/task/watch.js --beta"
   },
   "repository": {
     "type": "git",

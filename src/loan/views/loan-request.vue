@@ -17,7 +17,6 @@ export default {
 </script>
 
 <style lang="scss">
-  @import '../../global/style/color';
   .wyb-loan-request{
 
   }

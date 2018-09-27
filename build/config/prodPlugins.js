@@ -3,7 +3,7 @@
  * @Date:  2018-08-22 13:11:37 
  * @email:  chenchao3.sh@superjia.com 
  * @Last Modified by: chenchao
- * @Last Modified time: 2018-09-18 10:26:30
+ * @Last Modified time: 2018-09-26 11:46:24
  */
 
 import MiniCssExtractPlugin from 'mini-css-extract-plugin'
@@ -16,7 +16,7 @@ import ManifestPlugin from 'webpack-plugin-manifest'
 //生产插件
 export default [
   new MiniCssExtractPlugin({
-    filename: 'css/[name]-[contenthash:8].css'
+    filename: 'css/[name]_[contenthash:8].css'
   }),
   new ImageminPlugin({  //图片压缩插件
     test: /\.(jp[e]?g|png|gif|svg)$/i,

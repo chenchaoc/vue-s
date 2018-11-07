@@ -3,7 +3,7 @@
 * @Date: 2018-08-21 14:27:44
 * @Email: chenchao3@sh.superjia.com
  * @Last Modified by: chenchao
- * @Last Modified time: 2018-09-26 11:46:11
+ * @Last Modified time: 2018-11-07 15:34:09
 */
 
 import entry from './config/entry'
@@ -24,8 +24,8 @@ export default {
   output: {
     path: `${process.cwd()}/dist`,
     publicPath: envConfig.publicPath,
-    filename: 'js/[name]_[chunkhash:8].js',
-    //chunkFilename: '[name][id].js'
+    filename: 'js/[name].js',
+    chunkFilename: 'js/[name]_[chunkhash:8].js'
   },
   resolve: {
     extensions: [".js", ".vue", ".json"],

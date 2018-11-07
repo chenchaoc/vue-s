@@ -3,7 +3,7 @@
 * @Date: 2018-08-21 14:45:56
 * @Email: chenchao3@sh.superjia.com
  * @Last Modified by: chenchao
- * @Last Modified time: 2018-09-26 18:08:28
+ * @Last Modified time: 2018-11-02 16:55:41
 */
 
 import routes from './routes'
@@ -43,8 +43,8 @@ router.beforeEach((to, from, next) => {
 })
 
 router.afterEach((to, from) => {
-  //const { meta: { title } } = to
-  //title && common.changeDocTitle(title) //设置标题
+  const { meta: { title } } = to
+  title && common.changeDocTitle(title) //设置标题
   Vue.nextTick(() => {
     setTimeout(function() {
       store.dispatch('stopLoading')

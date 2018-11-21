@@ -4,7 +4,7 @@
 * @Email: chenchao3@sh.superjia.com
 * @Last Modified by: chenchao
  * @Last Modified by: chenchao
- * @Last Modified time: 2018-09-25 17:22:49
+ * @Last Modified time: 2018-11-21 14:48:53
 */
 
 import JSEncrypt from 'jsencrypt' //rsa非对称加密依赖包
@@ -425,7 +425,7 @@ export function formatMobile(v) {
  * @param  {[number | string]} v [description]
  * @return {[string]}   [description]
  */
-export function fullTime(v) {
+export function fullTime(v, customization = false) {
   const t = new Date(Number(v) || new Date().getTime())
   const year = t.getFullYear()
   const month = add0(t.getMonth() + 1)
@@ -433,14 +433,15 @@ export function fullTime(v) {
   const hour = add0(t.getHours())
   const minute = add0(t.getMinutes())
   const second = add0(t.getSeconds())
-  return `${year}-${month}-${date} ${hour}:${minute}:${second}`
+  return customization ? `${year}-${month}-${date}` : `${year}-${month}-${date} ${hour}:${minute}:${second}`
 }
+
 /**
  * [fullTimeStr 获取完整时间带中文年月日 返回例子：2014年06月27日13时57分24秒]
  * @param  {[number | string]} v [description]
  * @return {[string]}   [description]
  */
-export function fullTimeStr(v) {
+export function fullTimeStr(v, customization = false) {
   const t = new Date(Number(v) || new Date().getTime())
   const year = t.getFullYear()
   const month = add0(t.getMonth() + 1)
@@ -448,19 +449,7 @@ export function fullTimeStr(v) {
   const hour = add0(t.getHours())
   const minute = add0(t.getMinutes())
   const second = add0(t.getSeconds())
-  return `${year}年${month}月${date}日${hour}时${minute}分${second}秒`
-}
-/**
- * [fullDate 获取完整时间 返回例子：2014-06-27日]
- * @param  {[number | string]} v [description]
- * @return {[string]}   [description]
- */
-export function fullDate(v) {
-  const t = new Date(Number(v) || new Date().getTime())
-  const year = t.getFullYear()
-  const month = add0(t.getMonth() + 1)
-  const date = add0(t.getDate())
-  return `${year}-${month}-${date}`
+  return customization ? `${year}年${month}月${date}日` : `${year}年${month}月${date}日${hour}时${minute}分${second}秒`
 }
 /**
  * [add0 小于10的数字加上0]

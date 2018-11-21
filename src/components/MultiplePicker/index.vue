@@ -63,7 +63,7 @@ export default {
       })
     },
     dateConfirm(e, name, type) { //日期选择
-      const showValue = type == 'date' ? util.fullDate(e.getTime()) : util.fullTime(e.getTime())
+      const showValue = type == 'date' ? util.fullTimeStr(e.getTime(), true) : util.fullTimeStr(e.getTime())
       for (let index in this.list) {
         if (name == this.list[index].name) {
           this.list[index].value = e.getTime()

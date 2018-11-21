@@ -3,15 +3,25 @@
  * @Date:  2018-08-28 14:39:19
  * @email:  chenchao3.sh@superjia.com
  * @Last Modified by: chenchao
- * @Last Modified time: 2018-11-09 17:41:10
+ * @Last Modified time: 2018-11-21 15:14:11
  */
 
 import store from './store/store'
 import { Toast } from 'mint-ui'
 
+import loanApi from './loan/api'
+import mineApi from './mine/api'
+import repayApi from './repay/api'
+import staticApi from './static/api'
+
 const apiMap = {
-  homeList: 'homeList.action',
-  signatureUrl: 'signature.action', //微信分享获取code
+  //公共的
+  signatureUrl: '/signature.action', //微信获取code
+  //各个页面的
+  ...loanApi,
+  ...mineApi,
+  ...repayApi,
+  ...staticApi
 }
 
 //example  API('homeList', { a: 1 }, { headers: { OS: 'WECHAT' }, showLoading: false, hideToast: true }).then(() => {}).catch(() => {})

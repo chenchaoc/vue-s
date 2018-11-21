@@ -3,7 +3,7 @@
 * @Date: 2018-08-21 15:18:09
 * @Email: chenchao3@sh.superjia.com
  * @Last Modified by: chenchao
- * @Last Modified time: 2018-09-14 17:13:54
+ * @Last Modified time: 2018-11-21 14:30:58
 */
 import axios from 'axios'
 axios.interceptors.request.use(config => {
@@ -16,20 +16,20 @@ axios.interceptors.response.use(response => response, error => Promise.reject(er
 //所有api地址
 const apiUrls = {
   'dev': {
-    mApi: 'https://www.easy-mock.com/mock/5add7e95fe29a6045d0a7baa/study/',
-    mUrl: 'http//10.7.248.232:6888/'
+    mApi: 'https://www.easy-mock.com/mock/5add7e95fe29a6045d0a7baa/study',
+    mUrl: 'http//10.7.248.232:6888'
   },
   'test': {
-    mApi: 'http//mtest.chenchaoc.top/',
-    mUrl: 'http//mtest.chenchaoc.top/'
+    mApi: 'http//mtest.chenchaoc.top',
+    mUrl: 'http//mtest.chenchaoc.top'
   },
   'beta': {
-    mApi: 'http//mbeta.chenchaoc.top/',
-    mUrl: 'http//mbeta.chenchaoc.top/'
+    mApi: 'http//mbeta.chenchaoc.top',
+    mUrl: 'http//mbeta.chenchaoc.top'
   },
   'prod': {
-    mApi: 'https://www.easy-mock.com/mock/5add7e95fe29a6045d0a7baa/study/',
-    mUrl: 'https//m.chenchaoc.top/'
+    mApi: 'https://www.easy-mock.com/mock/5add7e95fe29a6045d0a7baa/study',
+    mUrl: 'https//m.chenchaoc.top'
   }
 }
 // 注入window.pageConfig

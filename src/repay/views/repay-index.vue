@@ -10,7 +10,7 @@
 import CommonTab from '../../components/Btab'
 export default {
   components: {
-    [CommonTab.name]: CommonTab,
+    [CommonTab.name]: CommonTab
   },
   methods: {
     goKnow() {

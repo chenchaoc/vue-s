@@ -9,7 +9,6 @@
 <script>
 import CommonTab from '../../components/Btab'
 export default {
-  name: 'wyb-repay',
   components: {
     [CommonTab.name]: CommonTab,
   },

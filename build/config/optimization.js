@@ -3,13 +3,27 @@
 * @Date: 2018-08-21 16:05:59
 * @Email: chenchao3@sh.superjia.com
  * @Last Modified by: chenchao
- * @Last Modified time: 2018-11-07 17:29:42
+ * @Last Modified time: 2018-11-20 16:50:29
 */
 //提取重复引用文件 
 //runtimeChunk，将入口提取出来，这样入口文件可以很快加载，并且当哪里有改动的时候，只有改动的地方和这个文件有变化
 //import UglifyJsPlugin from 'uglifyjs-webpack-plugin'
 
 export default {
+/*  minimizer: [
+    new UglifyJsPlugin({  //js压缩工具 //产品模式没有把console.log去掉，所以重写，否则的话mode为production情况下自动压缩
+      uglifyOptions: {
+        output: {
+          comments: false, //去掉注释
+          beautify: false //压缩成只有一整行
+        },
+        compress: {
+        // 删除所有的console语句 产品模式删除  开发模式显示
+          drop_console: true
+        }
+      }
+    })
+  ],*/
   // runtimeChunk: {
   //   name: 'manifest'
   // },
@@ -28,7 +42,7 @@ export default {
       },
       'wyb-vendor': {
         name: 'wyb-vendor', //生成文件名，依据output规则
-        filename: 'js/wyb-[name].js',
+        filename: 'js/wyb-vendor.js',
         test: /[\\/]node_modules[\\/]/, //提取哪个目录下
         // test: /[\\/]node_modules[\\/](vue|vue-router|vuex|axios|fastclick)[\\/]/, //提取哪个目录下
         chunks: 'initial', //对于异步导入的文件是否处理 initial否 async是

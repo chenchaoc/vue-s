@@ -9,11 +9,10 @@
 </template>
 
 <script>
-import API from '../../api'
-import CommonTab from '../../components/Btab'
+import CommonTab from '@components/Btab'
 import { Toast, Cell } from 'mint-ui'
+
 export default {
-  name: 'wyb-loan',
   components: {
     [CommonTab.name]: CommonTab,
     [Cell.name]: Cell
@@ -34,23 +33,26 @@ export default {
     // [1, 2, 3].includes(1)
     // console.log(Array.from('abc'))
     // console.log([1, 2, 3].findIndex((v) => v == 0))
+    // console.log(wechat)
+    // console.log($api)
+    // console.log(this.$store)
   },
   methods: {
     ajax() {
-      API('homeList', { a: util.jsEncrypt(1), b: { c: 1 } }).then((res) => {
+      $api.request('homeList', { a: util.jsEncrypt(1), b: { c: 1 } }).then((res) => {
         console.log(res)
       })
     },
     update(e) {
       let file = e.target.files[0]
-      console.log(file)
+      // console.log(file)
       let param = new FormData()
       param.append('file', file, file.name)
-      API('homeList', param, { headers: { OS: 'WECHAT', 'Content-Type': 'multipart/form-data' }, showLoading: false }).then((res) => {
+      $api.request('homeList', param, { headers: { OS: 'WECHAT', 'Content-Type': 'multipart/form-data' }, showLoading: false }).then((res) => {
         Toast('请求成功')
-        console.log(res)
+        // console.log(res)
       }).catch((e) => {
-        console.log(e, 1)
+        // console.log(e, 1)
       })
     },
     go(name) {

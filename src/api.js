@@ -3,7 +3,7 @@
  * @Date:  2018-08-28 14:39:19
  * @email:  chenchao3.sh@superjia.com
  * @Last Modified by: chenchao
- * @Last Modified time: 2018-11-02 16:41:13
+ * @Last Modified time: 2018-11-09 17:41:10
  */
 
 import store from './store/store'
@@ -15,7 +15,7 @@ const apiMap = {
 }
 
 //example  API('homeList', { a: 1 }, { headers: { OS: 'WECHAT' }, showLoading: false, hideToast: true }).then(() => {}).catch(() => {})
-export default function(name, data = {}, options = {}) {
+export function request(name, data = {}, options = {}) {
   const { showLoading = true, hideToast = false } = options
   !store.state.isLoading && showLoading && store.dispatch('startLoading')
   return common.ajax(apiMap[name], data, options).then((res) => {

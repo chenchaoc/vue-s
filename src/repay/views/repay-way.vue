@@ -18,11 +18,10 @@
 </template>
 
 <script>
-import Header from '../../components/Header'
-import { Accordion, AccordionItem } from 'ui/accordion'
+import Header from '@components/Header'
+import { Accordion, AccordionItem } from '@globalcomponents/accordion'
 // import { Indicator, Toast, TabContainer, TabContainerItem } from 'mint-ui'
 export default {
-  name: 'wyb-repay-way',
   components: {
     [Header.name]: Header,
     [Accordion.name]: Accordion,

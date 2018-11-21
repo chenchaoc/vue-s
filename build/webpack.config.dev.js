@@ -3,7 +3,7 @@
 * @Date: 2018-08-21 14:27:30
 * @Email: chenchao3@sh.superjia.com
  * @Last Modified by: chenchao
- * @Last Modified time: 2018-09-18 10:06:00
+ * @Last Modified time: 2018-11-20 16:53:31
 */
 
 import loaders from './config/loaders'
@@ -23,7 +23,7 @@ export default {
   output: {
     path: `${process.cwd()}/dist`,
     publicPath: envConfig.publicPath,
-    filename: '[name].js'
+    filename: 'js/[name].js'
   },
   resolve: {
     extensions: ['.js', '.vue', '.json'],

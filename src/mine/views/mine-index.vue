@@ -15,7 +15,6 @@ import CommonTab from '../../components/Btab'
 import { Picker, Popup } from 'mint-ui'
 import myaddress from '../components/pca.json'
 export default {
-  name: 'wyb-mine',
   components: {
     [CommonTab.name]: CommonTab,
     [Picker.name]: Picker,

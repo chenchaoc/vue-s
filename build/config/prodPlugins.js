@@ -3,7 +3,7 @@
  * @Date:  2018-08-22 13:11:37 
  * @email:  chenchao3.sh@superjia.com 
  * @Last Modified by: chenchao
- * @Last Modified time: 2018-11-07 17:30:44
+ * @Last Modified time: 2018-11-20 17:21:55
  */
 
 import MiniCssExtractPlugin from 'mini-css-extract-plugin'
@@ -15,7 +15,8 @@ import ManifestPlugin from 'webpack-plugin-manifest'
 
 //生产插件
 export default [
-  //固定在0.4.1,其他版本总是报 Conflicting order between 的错误
+  // 固定在0.4.1,其他版本总是报 Conflicting order between 的错误 如果要去掉可以自定义去掉 如↓↓↓↓↓↓
+  // https://github.com/webpack-contrib/mini-css-extract-plugin/issues/250#issuecomment-426102538
   new MiniCssExtractPlugin({
     filename: 'css/[name].css',
     chunkFilename: 'css/[name]_[contenthash:8].css'

@@ -3,7 +3,7 @@
 * @Date: 2018-08-21 20:56:24
 * @Email: chenchao3@sh.superjia.com
  * @Last Modified by: chenchao
- * @Last Modified time: 2018-09-12 13:05:28
+ * @Last Modified time: 2018-11-09 17:56:43
 */
 module.exports = {
   "root": true,
@@ -36,7 +36,8 @@ module.exports = {
     "Vuex": "vuex",
     "util": "util",
     "common": "common",
-    "wechat": "wechat"
+    "wechat": "wechat",
+    "$api": 'api'
   }),
 
   "extends": "vue",

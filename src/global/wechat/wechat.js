@@ -3,10 +3,9 @@
 * @Date: 2018-08-21 15:29:49
 * @Email: chenchao3@sh.superjia.com
  * @Last Modified by: chenchao
- * @Last Modified time: 2018-09-18 09:52:30
+ * @Last Modified time: 2018-11-09 17:57:18
 */
 //https://mp.weixin.qq.com/wiki?t=resource/res_main&id=mp1421141115
-import API from '../../api'
 const wx = window.wx
 const allJsApiList = [ //js接口列表
   'onMenuShareTimeline', //朋友圈
@@ -35,8 +34,8 @@ const allJsApiList = [ //js接口列表
   'showOptionMenu', //显示右上角菜单接口
   'hideMenuItems', //批量隐藏功能按钮
   'showMenuItems', //批量显示功能按钮
-  'hideAllNonBaseMenuItem',
-  'showAllNonBaseMenuItem',
+  'hideAllNonBaseMenuItem', //隐藏所有非基础按钮接口
+  'showAllNonBaseMenuItem', //显示所有非基础按钮接口
   'closeWindow', //关闭当前网页窗口
   'scanQRCode', //微信扫一扫
   'chooseWXPay', //微信支付
@@ -60,7 +59,7 @@ function filterJsApiList(l = [0, 1]) {
  * @return {[Promise]}           [description]
  */
 function initSignature(jsApiList = filterJsApiList()) {
-  return API('signatureUrl', { url: location.href.split('#')[0] }).then((res) => {
+  return $api.request('signatureUrl', { url: location.href.split('#')[0] }).then((res) => {
     const { appId, timestamp, nonceStr, signature } = res.data
     wx.config({
       debug: true,

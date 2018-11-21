@@ -3,7 +3,7 @@
 * @Date: 2018-08-21 16:07:48
 * @Email: chenchao3@sh.superjia.com
  * @Last Modified by: chenchao
- * @Last Modified time: 2018-11-03 18:56:47
+ * @Last Modified time: 2018-11-09 17:56:22
 */
 
 import webpack from 'webpack'
@@ -38,7 +38,8 @@ export default [
     Vuex: 'vuex',
     util: 'util',
     common: 'common',
-    wechat: 'wechat'
+    wechat: 'wechat',
+    $api: 'api'
   }),
   new HtmlWebpackPlugin({  //自动生成html文件并载入打包后的css js
     //title: '无忧宝',

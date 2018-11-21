@@ -8,7 +8,7 @@
 </template>
 
 <script>
-import Panel from 'ui/panel'
+import Panel from '@globalcomponents/panel'
 
 export default {
   name: 'm-accordion',

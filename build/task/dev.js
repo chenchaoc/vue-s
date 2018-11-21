@@ -3,7 +3,7 @@
 * @Date: 2018-08-21 15:41:54
 * @Email: chenchao3@sh.superjia.com
  * @Last Modified by: chenchao
- * @Last Modified time: 2018-09-14 14:11:39
+ * @Last Modified time: 2018-11-14 14:45:36
 */
 
 import express from 'express' //nodejs 框架
@@ -57,17 +57,17 @@ devServer.use(connectHistoryApiFallback({ verbose: false }))
 devServer.use(devMiddleware)
 devServer.use(hotMiddleware)
 
-devServer.use(httpProxyMiddleware(['/api', '/img'], {
-  logLevel: 'silent',
-  target: proxyConfig.proxyTarget,
-  changeOrigin: true
-}))
+// devServer.use(httpProxyMiddleware(['/api', '/img'], {
+//   logLevel: 'silent',
+//   target: proxyConfig.proxyTarget,
+//   changeOrigin: true
+// }))
 
-devServer.use(httpProxyMiddleware('**/*.action', {
-  logLevel: 'silent',
-  target: proxyConfig.proxyTarget,
-  changeOrigin: true
-}))
+// devServer.use(httpProxyMiddleware(['**/*.rest', '**/*.action'], {
+//   logLevel: 'silent',
+//   target: proxyConfig.proxyTarget,
+//   changeOrigin: true
+// }))
 
 devServer.listen(proxyConfig.devServerPort, function () {
   process.stdout.clearLine()

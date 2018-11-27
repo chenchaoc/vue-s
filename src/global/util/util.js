@@ -4,7 +4,7 @@
 * @Email: chenchao3@sh.superjia.com
 * @Last Modified by: chenchao
  * @Last Modified by: chenchao
- * @Last Modified time: 2018-11-21 14:48:53
+ * @Last Modified time: 2018-11-23 15:39:20
 */
 
 import JSEncrypt from 'jsencrypt' //rsa非对称加密依赖包
@@ -72,7 +72,7 @@ export function isFixPhone(v) {
 
 /**
  * [isZipCode 验证邮政编码 6位数字]
- * @param  {[type]}  v [description]
+ * @param  {[String]}  v [description]
  * @return {Boolean}   [description]
  */
 export function isZipCode(v) {
@@ -90,7 +90,7 @@ export function isWxCode(v) {
 
 /**
  * [isCarCode 验证车牌号]
- * @param  {[type]}  v [description]
+ * @param  {[String]}  v [description]
  * @return {Boolean}   [description]
  */
 export function isCarCode(v) {
@@ -116,6 +116,7 @@ export function isDate(v) {
  * os.isIos
  * os.isAndroid
  * os.isIphone
+ * os.isIphoneX
  * os.isIpad
  * os.isIpod
  * os.isWp
@@ -140,7 +141,7 @@ export function isDate(v) {
  * browser.version
  *
  */
-const detector = (function detect(ua) {
+const detector = (function detect(ua, w) {
   const os = {}
   const browser = {}
   const webkit = ua.match(/Web[kK]it[\/]{0,1}([\d.]+)/)
@@ -169,6 +170,12 @@ const detector = (function detect(ua) {
   if (iphone && !ipod) {
     os.isIos = os.isIphone = true
     os.version = iphone[2].replace(/_/g, '.')
+    const dpr = w.devicePixelRatio
+    const width = w.screen.width
+    const height = w.screen.height
+    if ((width == 375 && height == 812 && dpr == 3) || (width == 414 && height == 896 && (dpr == 3 || dpr == 2))) {
+      os.isIphoneX = true
+    }
   }
   if (ipad) {
     os.isIos = os.isIpad = true
@@ -239,7 +246,7 @@ const detector = (function detect(ua) {
     os.isUnix = true
   }
   return { os, browser }
-}(navigator.userAgent))
+}(navigator.userAgent, window))
 
 export var os = detector.os
 export var browser = detector.browser

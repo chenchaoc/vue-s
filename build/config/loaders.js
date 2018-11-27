@@ -3,7 +3,7 @@
 * @Date: 2018-08-21 17:08:12
 * @Email: chenchao3@sh.superjia.com
  * @Last Modified by: chenchao
- * @Last Modified time: 2018-09-18 10:29:35
+ * @Last Modified time: 2018-11-27 17:43:43
 */
 import MiniCssExtractPlugin from 'mini-css-extract-plugin' //从js分离出css,代替ExtractTextPlugin,webpack4官方推荐,支持非入口文件的css异步加载
 import eslintFriendlyFormatter from 'eslint-friendly-formatter'
@@ -75,7 +75,8 @@ export default [
       }
     ]
   }, {
-    test: /\.(png|jpg|gif|swf|jpeg)(\?.*)?$/,
+    test: /\.(png|jpg|gif|swf|jpeg|svg)(\?.*)?$/,
+    exclude: /iconfont.svg/, //字体图标的svg打包至iconfont文件夹
     use: [{
       loader: 'file-loader',
       options:{
@@ -83,10 +84,29 @@ export default [
       }
     }]
   }, {
-    test: /\.(woff2?|eot|ttf|otf|svg)(\?.*)?$/,
+    test: /\.(woff2?|eot|ttf|otf)(\?.*)?$/,
+    loader: 'file-loader',
+    options: {
+      name: 'iconfont/[name]_[sha512:hash:base64:8].[ext]'
+    }
+  }, {
+    test: /iconfont.svg/,
+    loader: 'file-loader',
+    options: {
+      name: 'iconfont/[name]_[sha512:hash:base64:8].[ext]'
+    }
+  }, {
+    test: /\.(mp4|webm|ogg|mp3|wav|flac|aac)(\?.*)?$/,
+    loader: 'url-loader',
+    options: {
+      limit: 10000,
+      name: 'media/[name]_[hash:8].[ext]'
+    }
+  }, /* { //如果用url-loader就会生成base64，不会在iconfont出来 .woff .eot .ttf .otf的文件，全部打包至common.css
+    test: /\.(woff2?|eot|ttf|otf)(\?.*)?$/,
     loader: 'url-loader',
     options: {
       name: 'iconfont/[name]_[sha512:hash:base64:8].[ext]'
     }
-  }
+  } */
 ]

@@ -36,6 +36,7 @@ export default {
     // console.log(wechat)
     // console.log($api)
     // console.log(this.$store)
+    console.log(util.os)
   },
   methods: {
     ajax() {
@@ -62,7 +63,7 @@ export default {
 }
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
   .wyb-loan{
     padding-bottom: 48px;
     min-height: 100%;

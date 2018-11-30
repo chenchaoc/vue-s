@@ -3,14 +3,13 @@
 * @Date: 2018-08-21 16:07:48
 * @Email: chenchao3@sh.superjia.com
  * @Last Modified by: chenchao
- * @Last Modified time: 2018-11-09 17:56:22
+ * @Last Modified time: 2018-11-28 09:52:30
 */
 
 import webpack from 'webpack'
 import ProgressBarPlugin from 'progress-bar-webpack-plugin'
 import chalk from 'chalk';
 import HtmlWebpackPlugin from 'html-webpack-plugin'
-import WebpackNotifierPlugin from 'webpack-notifier'
 import { envName } from './env'
 import VueLoaderPlugin from 'vue-loader/lib/plugin'
 //公共插件
@@ -47,12 +46,6 @@ export default [
     template: 'app.html',
     inject: 'body',  //默认插入body底部 选项：true, body, head, false
     minify: false,  //是否压缩html文件
-  }),
-  new WebpackNotifierPlugin({
-    title: '开发服务器',
-    successSound: 'Submarine',
-    failureSound: 'Glass',
-    suppressSuccess: true
   }),
   new webpack.HashedModuleIdsPlugin(), //chunkhash长效缓存
 ]

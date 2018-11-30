@@ -3,13 +3,14 @@
 * @Date:  2018-09-18 10:26:17
 * @email:  chenchao3.sh@superjia.com
  * @Last Modified by: chenchao
- * @Last Modified time: 2018-09-26 11:40:29
+ * @Last Modified time: 2018-11-30 16:48:53
  */
 
 import MiniCssExtractPlugin from 'mini-css-extract-plugin'
 import CleanWebpackPlugin from 'clean-webpack-plugin'
 import OptimizeCssAssetsPlugin from 'optimize-css-assets-webpack-plugin'
 import ImageminPlugin from 'imagemin-webpack-plugin'
+import WebpackNotifierPlugin from 'webpack-notifier'
 
 export default [
   new MiniCssExtractPlugin({
@@ -38,4 +39,10 @@ export default [
       allowExternal: false  //允许是否在webpack跟外清除文件夹，默认false 不允许
     }
   ),
+  new WebpackNotifierPlugin({
+    title: 'watch模式启动完成',
+    successSound: 'Submarine',
+    failureSound: 'Glass',
+    suppressSuccess: true
+  })
 ]

@@ -3,7 +3,7 @@
  * @Date:  2018-08-22 13:11:37 
  * @email:  chenchao3.sh@superjia.com 
  * @Last Modified by: chenchao
- * @Last Modified time: 2018-11-20 17:21:55
+ * @Last Modified time: 2018-11-28 10:05:02
  */
 
 import MiniCssExtractPlugin from 'mini-css-extract-plugin'
@@ -12,6 +12,7 @@ import CleanWebpackPlugin from 'clean-webpack-plugin'
 import ZipWebpackPlugin from 'zip-webpack-plugin'
 import ImageminPlugin from 'imagemin-webpack-plugin'
 import ManifestPlugin from 'webpack-plugin-manifest'
+import WebpackNotifierPlugin from 'webpack-notifier'
 
 //生产插件
 export default [
@@ -26,8 +27,8 @@ export default [
     disable: false,
     pngquant: {
       quality: '90'
-    }            
-  }),  
+    }
+  }),
   new ManifestPlugin({ //文件路径映射
     fileName: 'manifest.json',
     basePath: `${process.cwd()}/dist/`
@@ -51,6 +52,12 @@ export default [
   new ZipWebpackPlugin({
     path: '../uploadZip',  //相对于根目录
     filename: 'wyb.zip'
+  }),
+  new WebpackNotifierPlugin({
+    title: '打包完成',
+    successSound: 'Submarine',
+    failureSound: 'Glass',
+    suppressSuccess: true
   })
 ]
 

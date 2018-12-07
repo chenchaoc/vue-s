@@ -4,7 +4,7 @@
 * @Email: chenchao3@sh.superjia.com
 * @Last Modified by: chenchao
  * @Last Modified by: chenchao
- * @Last Modified time: 2018-11-23 15:39:20
+ * @Last Modified time: 2018-12-06 11:21:59
 */
 
 import JSEncrypt from 'jsencrypt' //rsa非对称加密依赖包
@@ -350,12 +350,10 @@ export function versionCompare(left, right) {
 }
 
 /**
- * 获取url上的query
- * @param {String} url
- * @example
- * paramOfUrl('http://192.168.1.44:2323/app/licai/tpl/protocaltpl?productId=20170721170145S70005&tpl=http%3A%2F%2Fhouse-test-water.oss.aliyuncs.com%2Fdirectwaterbucket%2Finvest%2F2017%2F5%2F16%2Fbd21776dc9784b73bbcef3618b76cb47&productType=0')
- * => { productId:"20170721170145S70005", productType: "0", tpl: "http://house-test-water.oss.aliyuncs.com/directwaterbucket/invest/2017/5/16/bd21776dc9784b73bbcef3618b76cb47" }
- * @returns {Object} params
+ * [paramOfUrl description]
+ * paramOfUrl('http://chenchaoc.top/index?a=1&b=2&c=3) => { a: '1', b: '2', c: '3' }
+ * @param  {[String]} url [description]
+ * @return {[Object]}     [description]
  */
 export function paramOfUrl(url) {
   url = url || window.location.href
@@ -378,7 +376,19 @@ export function paramOfUrl(url) {
   }
   return paramObj
 }
-
+/**
+ * [getQuery description]
+ * @param  {Object} o [description]
+ * getQuery({ a: '1', b: '2', c: '3' }) => a=1&b=2&c=3
+ * @return {[String]}   [description]
+ */
+export function getQuery(o = {}) {
+  return Object.keys(o).map((k) => {
+    let v = o[k]
+    v = encodeURIComponent(typeof v == 'string' ? v : JSON.stringify(v))
+    return `${k}=${v}`
+  }).join('&')
+}
 /**
  * 数值千分位格式化
  * 参数说明：

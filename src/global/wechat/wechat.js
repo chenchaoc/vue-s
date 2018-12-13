@@ -42,7 +42,7 @@ const allJsApiList = [ //js接口列表
   'openProductSpecificView', //跳转微信商品页
   'addCard', //添加微信卡券
   'chooseCard', //拉取适用卡券列表并获取用户选择信息
-  'openCard', //查看微信卡券
+  'openCard' //查看微信卡券
 ]
 function filterJsApiList(l = [0, 1]) {
   let list = []
@@ -87,7 +87,7 @@ export function share(option = {}, jsApiList = filterJsApiList()) {
           link: 'http://www.chenchaoc.top', //分享链接，该链接域名或路径必须与当前页面对应的公众号JS安全域名一致  公众号设置-->功能设置-->js接口安全域名
           imgUrl: 'http://www.chenchaoc.top/cc.jpeg', //分享图标
           dataUrl: '', //默认为空,朋友圈分享(如果type是music或video,则要提供数据链接)
-          desc: '无忧宝，借款无忧', //分享描述
+          desc: '无忧宝，借款无忧' //分享描述
         }, option)
         //console.warn('wechat.share', config)
         wx.updateTimelineShareData({ //朋友圈

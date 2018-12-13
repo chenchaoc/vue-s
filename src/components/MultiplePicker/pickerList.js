@@ -11,7 +11,7 @@ export default function () {
     reg: /^[\u4E00-\u9FA5a-zA-Z_]{2,20}$/, //正则
     regError: '姓名格式不正确', //不匹配正则的错误提示
     error: '请输入姓名', //value为空的错误提示
-    isMust: true, //是否必填
+    isMust: true //是否必填
   }, {
     name: 'mobile', //对应后端字段名
     title: '手机号', //标题
@@ -25,7 +25,7 @@ export default function () {
     reg: /^1[3456789]\d{9}$/, //正则
     regError: '手机号码格式不正确', //不匹配正则的错误提示
     error: '请输入手机号码', //错误提示
-    isMust: true, //是否必填
+    isMust: true //是否必填
   }, {
     name: 'idCard', //对应后端字段名
     title: '身份证号码', //标题
@@ -39,7 +39,7 @@ export default function () {
     reg: /^[1-9]\d{5}(18|19|([23]\d))\d{2}((0[1-9])|(10|11|12))(([0-2][1-9])|10|20|30|31)\d{3}[0-9Xx]$/, //正则
     regError: '身份证号码格式不正确', //不匹配正则的错误提示
     error: '请输入身份证号', //错误提示
-    isMust: true, //是否必填
+    isMust: true //是否必填
   }, {
     name: 'bankCardNo', //对应后端字段名
     title: '银行卡号', //标题
@@ -53,7 +53,7 @@ export default function () {
     reg: '', //正则
     regError: '银行卡号格式不正确', //不匹配正则的错误提示
     error: '请输入银行卡号', //错误提示
-    isMust: true, //是否必填
+    isMust: true //是否必填
   }, {
     name: 'occupation', //对应后端字段名
     title: '职业', //标题
@@ -155,7 +155,7 @@ export default function () {
     reg: '', //正则
     regError: '', //不匹配正则的错误提示
     error: '请选择开始时间', //错误提示
-    isMust: true, //是否必填
+    isMust: true //是否必填
   }, {
     name: 'endtime', //对应后端字段名
     title: '结束时间', //标题
@@ -171,7 +171,7 @@ export default function () {
     reg: '', //正则
     regError: '', //不匹配正则的错误提示
     error: '请选择结束时间', //错误提示
-    isMust: true, //是否必填
+    isMust: true //是否必填
   }, {
     name: 'remark', //对应后端字段名
     title: '', //标题
@@ -184,6 +184,6 @@ export default function () {
     reg: '', //正则
     regError: '请输入正确姓名', //不匹配正则的错误提示
     error: '请输入姓名', //错误提示
-    isMust: false, //是否必填
+    isMust: false //是否必填
   }]
 }

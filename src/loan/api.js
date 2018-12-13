@@ -1,3 +1,3 @@
 export default {
-  loanHomeList: '/homeList.action',
+  loanHomeList: '/homeList.action'
 }

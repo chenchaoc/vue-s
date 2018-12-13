@@ -25,7 +25,7 @@ export default {
   components: {
     [Header.name]: Header,
     [Accordion.name]: Accordion,
-    [AccordionItem.name]: AccordionItem,
+    [AccordionItem.name]: AccordionItem
     // [TabContainer.name]: TabContainer,
     // [TabContainerItem.name]: TabContainerItem
   },

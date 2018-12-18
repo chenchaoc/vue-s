@@ -20,10 +20,10 @@ export default [{
     title: '还款方式'
   }
 }, {
-  path: '/repay/hua',
+  path: '/repay/video',
   name: 'wyb-repay-hua',
-  component: () => import(/* webpackChunkName: "wyb-repay-hua" */ './views/repay-hua'),
+  component: () => import(/* webpackChunkName: "wyb-repay-video" */ './views/repay-video'),
   meta: {
-    title: '落花框'
+    title: '视频播放'
   }
 }]

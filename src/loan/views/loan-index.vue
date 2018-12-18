@@ -4,6 +4,7 @@
     <mt-cell title="发一个ajax看看" @click.native="ajax" is-link></mt-cell>
     <mt-cell title="组件列表" @click.native="go('wyb-demo')" is-link v-if="show"></mt-cell>
     <!-- <input type="file" name="file" accept="image/png,image/gif,image/jpeg" @change="update"> -->
+    <img src="../images/myycy.jpg" alt="">
     <common-tab></common-tab>
   </div>
 </template>
@@ -19,7 +20,8 @@ export default {
   },
   data() {
     return {
-      show: process.env.GLOBAL_ENV == 'dev'
+      show: process.env.GLOBAL_ENV == 'dev',
+      abc: ''
     }
   },
   mounted() {
@@ -45,21 +47,27 @@ export default {
   },
   methods: {
     ajax() {
-      $api.request('homeList', { a: util.jsEncrypt(1), b: { c: 1 } }).then((res) => {
+      $api.request('loanHomeList', { a: util.jsEncrypt(1), b: { c: 1 } }).then((res) => {
         console.log(res)
       })
     },
     update(e) {
       let file = e.target.files[0]
-      // console.log(file)
-      let param = new FormData()
-      param.append('file', file, file.name)
-      $api.request('homeList', param, { headers: { OS: 'WECHAT', 'Content-Type': 'multipart/form-data' }, showLoading: false }).then((res) => {
-        Toast('请求成功')
-        // console.log(res)
-      }).catch((e) => {
-        // console.log(e, 1)
-      })
+      console.log(file)
+      // let reader = new FileReader()
+      // reader.readAsDataURL(file)
+      // console.log(reader)
+      // reader.onload = (e) => {
+      //   this.abc = reader.result //转成base64
+      // }
+      // let param = new FormData() //使用formData
+      // param.append('file', file, file.name)
+      // $api.request('loanHomeList', param, { headers: { OS: 'WECHAT', 'Content-Type': 'multipart/form-data' }, showLoading: false }).then((res) => {
+      //   Toast('请求成功')
+      //   // console.log(res)
+      // }).catch((e) => {
+      //   // console.log(e, 1)
+      // })
     },
     go(name) {
       this.$router.push({ name })

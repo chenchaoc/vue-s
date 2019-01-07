@@ -88,7 +88,7 @@ export default {
       this.values = picker.values
       this.$emit('change', this.values)
     }
-  },
+  }
 }
 </script>
 

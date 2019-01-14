@@ -50,7 +50,7 @@
         animating: false, // 是否动画中
         isTwoClick: false, // 是否双击
         startTime: null, // 第一次时间
-        timeFunc: null, // 定时器
+        timeFunc: null // 定时器
       }
     },
     methods: {

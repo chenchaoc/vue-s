@@ -13,7 +13,7 @@
     name: 'common-tab',
     components: {
       [Btab.name]: Btab,
-      [BtabItem.name]: BtabItem,
+      [BtabItem.name]: BtabItem
     }
   }
 </script>

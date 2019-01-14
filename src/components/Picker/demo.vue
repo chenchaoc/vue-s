@@ -26,7 +26,7 @@ export default {
         values: [
           {
             text: '甲',
-            mode: 1,
+            mode: 1
           }, {
             text: '乙',
             mode: 2

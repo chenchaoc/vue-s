@@ -21,9 +21,28 @@ export default [{
   }
 }, {
   path: '/repay/video',
-  name: 'wyb-repay-hua',
+  name: 'wyb-repay-video',
   component: () => import(/* webpackChunkName: "wyb-repay-video" */ './views/repay-video'),
   meta: {
     title: '视频播放'
   }
+}, {
+  path: '/repay/test',
+  component: () => import(/* webpackChunkName: "wyb-repay-test" */ './views/repay-test'),
+  children: [{
+    path: 'a',
+    name: 'wyb-repay-test-a',
+    component: () => import(/* webpackChunkName: "wyb-repay-test-a" */ './views/repay-test-a'),
+    meta: {
+      keepAlive: true,
+      title: 'test-a'
+    }
+  }, {
+    path: 'b',
+    name: 'wyb-repay-test-b',
+    component: () => import(/* webpackChunkName: "wyb-repay-test-b" */ './views/repay-test-b'),
+    meta: {
+      title: 'test-b'
+    }
+  }]
 }]

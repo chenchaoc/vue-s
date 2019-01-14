@@ -6,6 +6,8 @@
  * @Last Modified time: 2018-11-21 14:30:58
 */
 import axios from 'axios'
+import router from '../../router'
+// console.log(bridge.ajax)
 axios.interceptors.request.use(config => {
   config.headers = Object.assign({}, { 'X-Requested-With': 'XMLHttpRequest' }, config.headers)
   return config
@@ -61,6 +63,7 @@ export function ajax(url, data = {}, options = {}) {
     method: 'post',
     timeout: 20000,
     data,
+    // data: Object.assign({ _t: new Date().getTime() }, data),
     url: `${apiUrls[process.env.GLOBAL_ENV].mApi}${url}`
   }
   const ajaxOptions = Object.assign({}, defaultOptions, options)
@@ -94,4 +97,32 @@ export async function ajaxOrder(...args) {
     throw result
   }
   return result
+}
+
+/**
+ *
+ * @param {*} app
+ * @param {*} h5
+ */
+export function go(app, h5) {
+  if (process.env.GLOBAL_ENV == 'dev') {
+    console.warn('common.go', app, h5)
+  }
+  if (util.browser.isApp && app) {
+    if (app.back) {
+      bridge.back()
+    } else {
+      bridge.jumpui(app)
+    }
+  } else if (h5) {
+    if (h5.href) {
+      location.href = h5.href
+    } else if (h5.replace) {
+      router.replace(h5)
+    } else if (h5.go) {
+      router.go(h5.go)
+    } else {
+      router.push(h5)
+    }
+  }
 }

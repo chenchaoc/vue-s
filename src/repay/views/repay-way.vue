@@ -22,6 +22,7 @@ import Header from '@components/Header'
 import { Accordion, AccordionItem } from '@globalcomponents/accordion'
 // import { Indicator, Toast, TabContainer, TabContainerItem } from 'mint-ui'
 export default {
+  name: 'wyb-reapy-way',
   components: {
     [Header.name]: Header,
     [Accordion.name]: Accordion,
@@ -32,6 +33,7 @@ export default {
   mounted() {
     // Toast('还款方式')
     // Indicator.open()
+    // wechat.share()
   }
 }
 </script>

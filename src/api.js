@@ -28,6 +28,7 @@ const apiMap = {
 export function request(name, data = {}, options = {}) {
   const { showLoading = true, hideToast = false } = options
   !store.state.isLoading && showLoading && store.dispatch('startLoading')
+  console.log(apiMap[name], data)
   return common.ajax(apiMap[name], data, options).then((res) => {
     store.state.isLoading && showLoading && store.dispatch('stopLoading')
     if (res.errorCode == 0) {

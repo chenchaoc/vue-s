@@ -38,12 +38,12 @@ export default {
     // console.log(wechat)
     // console.log($api)
     // console.log(this.$store)
-    console.log(util.os)
-    console.log(util.getQuery({
-      a: 1,
-      b: 2
-    }))
-    console.log(util.paramOfUrl(`?a=1&b=2&c=3`))
+    // console.log(bridge)
+    // console.log(util.getQuery({
+    //   a: 1,
+    //   b: 2
+    // }))
+    // console.log(util.paramOfUrl(`?a=1&b=2&c=3`))
   },
   methods: {
     ajax() {

@@ -44,7 +44,4 @@ export default {
       color: #3b82f3;
     }
   }
-  .m-btab-nav-inner {
-    display: inline-block;
-  }
 </style>

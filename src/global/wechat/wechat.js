@@ -59,10 +59,11 @@ function filterJsApiList(l = [0, 1]) {
  * @return {[Promise]}           [description]
  */
 function initSignature(jsApiList = filterJsApiList()) {
-  return $api.request('signatureUrl', { url: location.href.split('#')[0] }).then((res) => {
+  console.log(location.href.split('#')[0])
+  return $api.request('signatureUrl', { url: encodeURIComponent(location.href.split('#')[0]) }).then((res) => {
     const { appId, timestamp, nonceStr, signature } = res.data
     wx.config({
-      debug: true,
+      debug: false,
       appId,
       timestamp,
       nonceStr,

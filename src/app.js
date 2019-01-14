@@ -11,7 +11,7 @@ import router from './router/index'
 import store from './store/store'
 import Fastclick from 'fastclick'
 Fastclick.attach(document.body)
-if (['test', 'beta'].includes(process.env.GLOBAL_ENV)) { //在test beta环境引入vconsole调试
+if (['dev', 'test', 'beta'].includes(process.env.GLOBAL_ENV)) { //在test beta环境引入vconsole调试
   new (require('vconsole'))()
 }
 new Vue({

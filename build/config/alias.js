@@ -12,6 +12,7 @@ export default {
   // 文件
   'vue$': 'vue/dist/vue.js',
   'util': `${cwd}/src/global/util/util.js`,
+  'bridge': `${cwd}/src/global/bridge/bridge.js`,
   'wechat': `${cwd}/src/global/wechat/wechat.js`,
   'common': `${cwd}/src/global/common/common.js`,
   'api': `${cwd}/src/api.js`,

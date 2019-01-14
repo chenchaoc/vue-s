@@ -17,11 +17,11 @@ function callnative(api, params) {
     try {
       // 1.创建全局回调函数，放在映射表中
       const callback = `cb_${idCounter++}`
-      if (__DEV__) {
+      if (process.env.GLOBAL_ENV == 'dev') {
         console.warn(`[bridge.${api}.${callback}]`, params)
       }
       window[callback] = data => {
-        if (__DEV__) {
+        if (process.env.GLOBAL_ENV == 'dev') {
           console.warn(`${callback}-->`, data && JSON.parse(JSON.stringify(data)))
         }
         // data ? resolve(data) : reject(data)
@@ -146,4 +146,3 @@ export function offCallback(method) {
 window.callJs = function (method, params) {
   callbackMap[method] && callbackMap[method](params)
 }
-

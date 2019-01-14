@@ -34,6 +34,7 @@ module.exports = {
     "util": "util",
     "common": "common",
     "wechat": "wechat",
+    "bridge": "bridge",
     "$api": 'api'
   }),
 

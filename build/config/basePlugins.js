@@ -36,6 +36,7 @@ export default [
     VueRouter: 'vue-router',
     Vuex: 'vuex',
     util: 'util',
+    bridge: 'bridge',
     common: 'common',
     wechat: 'wechat',
     $api: 'api'
@@ -45,6 +46,8 @@ export default [
     filename: 'index.html',
     template: 'app.html',
     inject: 'body',  //默认插入body底部 选项：true, body, head, false
+    chunksSortMode: 'manual',
+    chunks: ['wyb-vendor', 'wyb-common'],
     minify: false,  //是否压缩html文件
   }),
   new webpack.HashedModuleIdsPlugin(), //chunkhash长效缓存

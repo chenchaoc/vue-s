@@ -8,6 +8,8 @@
 
 import webpack from 'webpack'
 import webpackConfig from '../webpack.config.prod'
+import readline from 'readline'
+
 import deploy from './deploy'
 //import upload from './upload';
 import { envName } from '../config/env.js'
@@ -16,8 +18,8 @@ webpack(webpackConfig, function(error,stats){
   if(error){
     throw error
   }
-  process.stdout.clearLine()
-  process.stdout.cursorTo(0)
+  readline.clearLine(process.stdout, 0);
+  readline.cursorTo(process.stdout, 0, null);
   console.log(stats.toString({
     colors: true,
     hash: false,

@@ -8,7 +8,7 @@
 
 //node服务配置
 export default {
-  devServerPort: 6888, // 开发服务器端口号
+  devServerPort: 6898, // 开发服务器端口号
   // proxyTarget: `http://${ip.address()}:6888`, // dev代理目标接口地址？
-  bkdServerPort: 6888
+  bkdServerPort: 6898
 }

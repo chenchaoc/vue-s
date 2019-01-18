@@ -15,6 +15,7 @@ import webpackDevMiddleware from 'webpack-dev-middleware' //nodejs服务中间�
 import webpackHotMiddleware from 'webpack-hot-middleware' //热刷新
 import connectHistoryApiFallback from 'connect-history-api-fallback' //刷新页面不会404
 import httpProxyMiddleware from 'http-proxy-middleware' //http代理中间件
+import readline from 'readline'
 
 import proxyConfig from '../config/proxyConfig'
 import webpackConfig from '../webpack.config.dev'
@@ -70,8 +71,8 @@ devServer.use(hotMiddleware)
 // }))
 
 devServer.listen(proxyConfig.devServerPort, function () {
-  process.stdout.clearLine()
-  process.stdout.cursorTo(0)
+  readline.clearLine(process.stdout, 0);
+  readline.cursorTo(process.stdout, 0, null);
   console.log(`dev-server at ${chalk.magenta.underline(`http://${ip.address()}:${proxyConfig.devServerPort}/`)}`)
   open(`http://${ip.address()}:${proxyConfig.devServerPort}/`)
 })

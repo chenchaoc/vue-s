@@ -20,7 +20,7 @@ export default {
   optimization,
   performance: { //The following asset(s) exceed the recommended size limit (244 KiB)  单个文件超过244K不会出现告警
     hints: false
-  },  
+  },
   output: {
     path: `${process.cwd()}/dist`,
     publicPath: envConfig.publicPath,

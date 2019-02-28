@@ -12,7 +12,6 @@
 <script>
 import CommonTab from '@components/Btab'
 import { Toast, Cell } from 'mint-ui'
-
 export default {
   components: {
     [CommonTab.name]: CommonTab,
@@ -25,6 +24,7 @@ export default {
     }
   },
   mounted() {
+    const a = 1
     //this.ajax()
     // wechat.share().then(() => {
     //   console.log(1)
@@ -38,12 +38,14 @@ export default {
     // console.log(wechat)
     // console.log($api)
     // console.log(this.$store)
-    // console.log(bridge)
+    // console.log(util)
     // console.log(util.getQuery({
     //   a: 1,
     //   b: 2
     // }))
-    // console.log(util.paramOfUrl(`?a=1&b=2&c=3`))
+    // console.log(util.paramOfUrl(`a=1&b=2&c=3`))
+    // console.log(window.screen.availHeight)
+    // console.log(window.screen.availWidth)
   },
   methods: {
     ajax() {

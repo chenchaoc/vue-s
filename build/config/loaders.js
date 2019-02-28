@@ -14,7 +14,7 @@ function postcssPlugins() {
     plugins() {
       return [
         require('autoprefixer')({
-            browsers: ['last 2 version', 'iOS >= 7', 'Android >= 4', 'not ie < 9']
+            browsers: ['> 0.01%', 'last 8 version', 'not ie <= 8', 'Firefox > 20']
         })
       ]
     }

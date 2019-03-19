@@ -12,7 +12,7 @@ import { BundleAnalyzerPlugin }  from 'webpack-bundle-analyzer' //可视化查�
 export default [
   new webpack.HotModuleReplacementPlugin(),
   new WebpackNotifierPlugin({
-    title: '开发服务器',
+    title: '开发环境启动成功',
     successSound: 'Submarine',
     failureSound: 'Glass',
     suppressSuccess: true

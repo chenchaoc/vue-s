@@ -11,13 +11,14 @@ import OptimizeCssAssetsPlugin from 'optimize-css-assets-webpack-plugin'
 import CleanWebpackPlugin from 'clean-webpack-plugin'
 import ZipWebpackPlugin from 'zip-webpack-plugin'
 import ImageminPlugin from 'imagemin-webpack-plugin'
+import imageminMozjpeg from 'imagemin-mozjpeg'
+import imageminPngquant from 'imagemin-pngquant'
 import ManifestPlugin from 'webpack-plugin-manifest'
 import WebpackNotifierPlugin from 'webpack-notifier'
 
+import { envName } from './env'
 //生产插件
 export default [
-  // 固定在0.4.1,其他版本总是报 Conflicting order between 的错误 如果要去掉可以自定义去掉 如↓↓↓↓↓↓
-  // https://github.com/webpack-contrib/mini-css-extract-plugin/issues/250#issuecomment-426102538
   new MiniCssExtractPlugin({
     filename: 'css/[name].css',
     chunkFilename: 'css/[name]_[contenthash:8].css'
@@ -25,9 +26,24 @@ export default [
   new ImageminPlugin({  //图片压缩插件
     test: /\.(jp[e]?g|png|gif|svg)$/i,
     disable: false,
-    pngquant: {
-      quality: '90'
-    }
+    // pngquant: {
+    //   quality: 80
+    // },
+    optipng: {
+      optimizationLevel: 6 // 0-7
+    },
+    gifsicle: {
+      optimizationLevel: 2 // 1-3
+    },
+    plugins: [
+      imageminMozjpeg({
+        quality: 80, // 0-100
+        progressive: true
+      }),
+      imageminPngquant({
+        quality: [0.6, 0.8]
+      })
+    ]
   }),
   new ManifestPlugin({ //文件路径映射
     fileName: 'manifest.json',
@@ -54,7 +70,7 @@ export default [
     filename: 'wyb.zip'
   }),
   new WebpackNotifierPlugin({
-    title: '打包完成',
+    title: `${{'test': '测试', 'beta': 'beta', 'prod': '生产'}[envName]}环境打包完成`,
     successSound: 'Submarine',
     failureSound: 'Glass',
     suppressSuccess: true

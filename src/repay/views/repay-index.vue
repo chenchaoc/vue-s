@@ -2,13 +2,6 @@
   <div class="wyb-reapy-index">
     repay-还款
     <div @click="goKnow('wyb-repay-way')">还款须知</div>
-    <input type="text">
-    <div class="height-1000"></div>
-    <div class="dibu" @click="goKnow('wyb-repay-test-a')">dibudibudibudibudibudibudibudibudibudibudibudibudibudibudibudibudibudibudibudibudibudibudiudibudibudibudibudibudibudibudibudibudibudibudibudiudibudibudibudibudibudibudibudibudibudibudibudibudiudibudibudibudibudibudibudibudibudibudibudibudibudiudibudibudibudibudibudibudibudibudibudibudibudibudibudibudibudibudibudibudibudibudibudibu</div>
-    <ul>
-      <li v-for="(item, index) in list" :key="index">{{item}}</li>
-    </ul>
-    <div @click="add">add</div>
     <common-tab></common-tab>
   </div>
 </template>
@@ -30,7 +23,7 @@ export default {
   },
   created() {
     // wechat.share()
-    this.add()
+    // this.add()
   },
   methods: {
     goKnow(name) {
@@ -48,12 +41,5 @@ export default {
 <style lang="scss">
   .wyb-reapy-index{
     padding-bottom: 48px;
-  }
-  .height-1000{
-    height: 1000px;
-  }
-  .dibu{
-    word-break: break-all;
-    word-wrap: break-word;
   }
 </style>

@@ -24,9 +24,9 @@ export default {
       }
     })
   ],*/
-  // runtimeChunk: {
-  //   name: 'manifest'
-  // },
+  runtimeChunk: {
+    name: 'manifest'
+  },
   splitChunks: {
     automaticNameDelimiter: '-',
     cacheGroups: {

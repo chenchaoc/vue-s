@@ -11,8 +11,7 @@ export default {
     'vue',
     'vuex',
     'vue-router',
-    'axios',
-    'fastclick',
+    'axios'
   ],
   'wyb-common': [
     './global/common/common.js',

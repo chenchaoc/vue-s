@@ -3,7 +3,7 @@
     <mt-cell title="申请借款" @click.native="go('wyb-loan-request')" is-link></mt-cell>
     <mt-cell title="发一个ajax看看" @click.native="ajax" is-link></mt-cell>
     <mt-cell title="组件列表" @click.native="go('wyb-demo')" is-link v-if="show"></mt-cell>
-    <!-- <input type="file" name="file" accept="image/png,image/gif,image/jpeg" @change="update"> -->
+    <input type="file" name="file" @change="update">
     <img src="../images/myycy.jpg" alt="">
     <common-tab></common-tab>
   </div>
@@ -19,7 +19,7 @@ export default {
   },
   data() {
     return {
-      show: process.env.GLOBAL_ENV == 'dev',
+      show: this.$env == 'dev',
       abc: ''
     }
   },
@@ -44,8 +44,8 @@ export default {
     //   b: 2
     // }))
     // console.log(util.paramOfUrl(`a=1&b=2&c=3`))
-    // console.log(window.screen.availHeight)
-    // console.log(window.screen.availWidth)
+    // console.log(util.os)
+    // console.log(util.browser)
   },
   methods: {
     ajax() {
@@ -55,7 +55,8 @@ export default {
     },
     update(e) {
       let file = e.target.files[0]
-      console.log(file)
+      // console.log(file)
+      alert(file.name)
       // let reader = new FileReader()
       // reader.readAsDataURL(file)
       // console.log(reader)

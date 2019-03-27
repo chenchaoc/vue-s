@@ -10,9 +10,9 @@ import App from './app.vue'
 import router from './router/index'
 import store from './store/store'
 
-if (['test', 'beta'].includes(process.env.GLOBAL_ENV)) { //在test beta环境引入vconsole调试
-  new (require('vconsole'))()
-}
+// if (['test', 'beta'].includes(process.env.GLOBAL_ENV)) { //在test beta环境引入vconsole调试
+//   new (require('vconsole'))()
+// }
 
 Vue.prototype.$env = process.env.GLOBAL_ENV
 

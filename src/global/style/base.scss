@@ -44,26 +44,26 @@
 .flex {
   display: flex;
   &.center { //主轴侧轴居中
-      align-items: center;
-      justify-content: center;
+    align-items: center;
+    justify-content: center;
   }
   &.center-v { //侧轴居中
-      align-items: center;
+    align-items: center;
   }
   &.center-h { //主轴居中
-      justify-content: center;
+    justify-content: center;
   }
   &.between { //主轴两端对齐
-      justify-content: space-between;
+    justify-content: space-between;
   }
   &.around {
     justify-content: space-around;
   }  
   &.column { //主轴为垂直方向，起点在上沿
-      flex-direction: column;
+    flex-direction: column;
   }
   &.row { ////换行，第一行在上方
-      flex-wrap: row;
+    flex-wrap: row;
   }
 }
 //字体加粗

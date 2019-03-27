@@ -10,6 +10,7 @@ import { argv } from 'yargs'; //可以拿到npm run命令中的字段
 // 环境：dev|test|beta|prod
 export const envName = ['dev', 'test', 'beta', 'prod'].find(e => argv[e])
 
+// 环境变量的输出
 export const envConfig = {
   dev: {
     publicPath: '/'

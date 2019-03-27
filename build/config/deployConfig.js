@@ -6,6 +6,7 @@
  * @Last Modified time: 2018-11-21 14:15:36
  */
 
+ // 上传ftp配置
 export default {
   catalog: 'htdocs',
   project: 'vf',

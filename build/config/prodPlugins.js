@@ -70,7 +70,7 @@ export default [
     filename: 'wyb.zip'
   }),
   new WebpackNotifierPlugin({
-    title: `${{'test': '测试', 'beta': 'beta', 'prod': '生产'}[envName]}环境打包完成`,
+    title: `${{'test': '测试', 'beta': '贝塔', 'prod': '生产'}[envName]}环境打包完成`,
     successSound: 'Submarine',
     failureSound: 'Glass',
     suppressSuccess: true

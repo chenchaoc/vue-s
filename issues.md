@@ -39,10 +39,11 @@ h5-app 项目根目录
 |　　|　　|---bridge 与原生app交互桥
 |　　|　　|---components 全局组件
 |　　|　　|---iconfont 字体图标
+|　　|　　|---images 全局图片
 |　　|　　|---common 整站通用适配
-|　　|　　|---module 其他模块(样式重置，polyfill)
-|　　|　　|---util 工具方法
+|　　|　　|---module 其他模块(polyfill)
 |　　|　　|---style 样式
+|　　|　　|---util 工具方法
 |　　|　　|---wechat 微信相关
 |　　|---loan 借款相关
 |　　|---mine 我的相关
@@ -51,6 +52,7 @@ h5-app 项目根目录
 |　　|---static 静态页面相关
 |　　|---store vuex相关
 |　　|---app.js 业务入口
+|　　|---apu.js 接口相关
 |---uploadZip 上线Zip包目录
 |---.babelrc babel运行时配置
 |---.editorconfig 编辑器配置
@@ -60,3 +62,4 @@ h5-app 项目根目录
 |---package-lock.json npm配置锁
 |---package.json npm配置
 |---README.md 项目自述
+|---write.md 语法规范
